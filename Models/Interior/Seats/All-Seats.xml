@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <!-- Left -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -11.000 </x-m>
+      <y-m>  -1.070 </y-m>
+      <z-m>  -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -11.000 </x-m>
+      <y-m>  -0.570 </y-m>
+      <z-m>  -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -10.000 </x-m>
+      <y-m>  -1.070 </y-m>
+      <z-m>  -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -10.000 </x-m>
+      <y-m>  -0.570 </y-m>
+      <z-m>  -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -9.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -9.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -8.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -8.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -3.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -3.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -2.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -2.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  1.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  1.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  2.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  2.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  3.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  3.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  4.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>
+    <offsets>
+      <x-m>  4.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -11.000 </x-m>
+      <y-m>   1.070 </y-m>
+      <z-m>  -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -11.000 </x-m>
+      <y-m>   0.570 </y-m>
+      <z-m>  -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -10.000 </x-m>
+      <y-m>   1.070 </y-m>
+      <z-m>  -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -10.000 </x-m>
+      <y-m>   0.570 </y-m>
+      <z-m>  -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -9.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -9.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -8.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -8.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -3.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -3.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -2.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -2.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  1.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  1.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  2.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  2.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  3.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  3.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  4.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/seatR.xml</path>
+    <offsets>
+      <x-m>  4.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

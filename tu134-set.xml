@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<!-- <PropertyList include="tu134-jsbsim-cnf.xml"> -->
+<PropertyList include="tu134-yasim-cnf.xml">
+
+  <sim>
+
+    <description>Tu 134 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+
+    <rating>
+      <FDM type="int">     1 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   2 </model>
+    </rating>
+
+  </sim>
+
+</PropertyList>
+

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff			 	  	#
+    #    	yurik@megasignal.com					   	#
+    #                                                                           #
+    # Updated by Helijah August 2012                                            #
+    #############################################################################	  
+-->
+
+<!-- Altimeter UVO-15 metric 3D instrument for Tu-154 -->
+<PropertyList>
+
+  <path>uvid-15m.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>kr</object-name>
+    <object-name>hs</object-name>
+    <object-name>knob</object-name>
+    <object-name>lamp</object-name>
+    <object-name>alt10</object-name>
+    <object-name>alt100</object-name>
+    <object-name>alt1000</object-name>
+    <object-name>alt10000</object-name>
+    <object-name>millibar1</object-name>
+    <object-name>millibar10</object-name>
+    <object-name>millibar100</object-name>
+    <object-name>millibar1000</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>alt10</object-name>
+    <object-name>alt100</object-name>
+    <object-name>alt1000</object-name>
+    <object-name>alt10000</object-name>
+    <object-name>millibar1</object-name>
+    <object-name>millibar10</object-name>
+    <object-name>millibar100</object-name>
+    <object-name>millibar1000</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <!--Needles-->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor> 0.10973 </factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!--Altitude digits-->
+  <animation>
+    <type>rotate</type>
+    <object-name>alt10</object-name>
+    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor> 3.6 </factor>
+    <center>
+      <x-m> -0.02253 </x-m>
+      <y-m>  0.02403 </y-m>
+      <z-m>  0.00511 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>alt100</object-name>
+    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor> 0.36 </factor>
+    <center>
+      <x-m> -0.022530 </x-m>
+      <y-m>  0.011090 </y-m>
+      <z-m>  0.005109 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>alt1000</object-name>
+    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor> 0.036 </factor>
+    <center>
+      <x-m> -0.022530 </x-m>
+      <y-m> -0.010590 </y-m>
+      <z-m>  0.005109 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>alt10000</object-name>
+    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor> 0.0036 </factor>
+    <center>
+      <x-m> -0.02263 </x-m>
+      <y-m> -0.02212 </y-m>
+      <z-m>  0.00560 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Pressure digits in millibar -->
+  <animation>
+    <type>rotate</type>
+    <object-name>millibar1</object-name>
+    <property>/instrumentation/altimeter/millibar/unit1</property>
+    <factor> 36 </factor>
+    <center>
+      <x-m> -0.01328 </x-m>
+      <y-m>  0.01350 </y-m>
+      <z-m> -0.03130 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>millibar10</object-name>
+    <property>/instrumentation/altimeter/millibar/unit10</property>
+    <factor> 36 </factor>
+    <center>
+      <x-m> -0.013280 </x-m>
+      <y-m>  0.004458 </y-m>
+      <z-m> -0.031300 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>millibar100</object-name>
+    <property>/instrumentation/altimeter/millibar/unit100</property>
+    <factor> 36 </factor>
+    <center>
+      <x-m> -0.013280 </x-m>
+      <y-m> -0.004471 </y-m>
+      <z-m> -0.031300 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>millibar1000</object-name>
+    <property>/instrumentation/altimeter/millibar/unit1000</property>
+    <factor> 36 </factor>
+    <center>
+      <x-m> -0.01328 </x-m>
+      <y-m> -0.01282 </y-m>
+      <z-m> -0.03130 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lamp</object-name>
+    <condition>
+      <not>
+        <property>tu134/systems/svs/powered</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lamp</object-name>
+    <condition>
+      <not>
+        <property>tu134/systems/svs/powered</property>
+      </not>
+    </condition>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <!--Controls-->
+  <animation>
+    <type>rotate</type>
+    <object-name>kr</object-name>
+    <property>tu134/instrumentation/altimeter-1/kr</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 140 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.019850 </x-m>
+      <y-m>  0.000017 </y-m>
+      <z-m> -0.068210 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>kr</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          if( getprop("tu134/instrumentation/altimeter-1/kr") == 0.0 ){
+          interpolate("tu134/instrumentation/altimeter-1/kr", 1.0, 0.3 );}
+          else {interpolate("tu134/instrumentation/altimeter-1/kr", 0.0, 0.3 );}
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>hs</object-name>
+    <property>instrumentation/altimeter/setting-inhg</property>
+    <factor>500</factor>
+    <center>
+      <x-m>  0.019850 </x-m>
+      <y-m>  0.000017 </y-m>
+      <z-m> -0.068210 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>hs</object-name>
+    <visible>true</visible>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step> 0.01 </step>
+        <min> 10.00 </min>
+        <max> 40.00 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>hs</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step> -0.01 </step>
+        <min>  10.00 </min>
+        <max>  40.00 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <!--Mouse wheel-->
+  <animation>
+    <type>pick</type>
+    <object-name>hs</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step> 0.01 </step>
+        <min> 10.00 </min>
+        <max> 40.00 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>hs</object-name>
+    <visible>true</visible>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step> -0.01 </step>
+        <min>  10.00 </min>
+        <max>  40.00 </max>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>
+

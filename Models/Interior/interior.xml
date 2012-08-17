@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>planchet</object-name>
+    <object-name>intporte</object-name>
+    <object-name>inttourporte</object-name>
+
+    <!-- Objets transparents
+    <object-name>intvitres</object-name> -->
+  </animation>
+<!--
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+-->
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -15.28000 </x-m>
+      <y-m>  -0.46000 </y-m>
+      <z-m>  -0.90000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -16.056 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.872 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Les sieges -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/All-Seats.xml</path>
+  </model>
+
+  <!-- Porte -->
+  <animation>
+    <name>IntLaPorte</name>
+    <object-name>intporte</object-name>
+    <object-name>inttourporte</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPorte</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 65 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -13.055 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -1.188 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>IntLaPorte</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

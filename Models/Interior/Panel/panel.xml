@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+    <object-name>panel2</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.090 </x-m>
+      <y-m> -0.540 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.090 </x-m>
+      <y-m> 0.540 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/ai2/ai2.xml</path>
+    <offsets>
+      <x-m>  0.08869 </x-m>
+      <y-m> -0.39003 </y-m>
+      <z-m>  0.19778 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ENGINES WARNING -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/Warnings/engines.xml</path>
+    <offsets>
+      <x-m>  0.087000 </x-m>
+      <y-m> -0.000205 </y-m>
+      <z-m>  0.070220 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AP WARNING -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/Warnings/ap.xml</path>
+    <offsets>
+      <x-m>  0.087000 </x-m>
+      <y-m> -0.125000 </y-m>
+      <z-m> -0.073000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AT -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/at/at.xml</path>
+    <offsets>
+      <x-m>  0.087 </x-m>
+      <y-m> -0.142 </y-m>
+      <z-m> -0.185 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COM-1 -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/com/com-1.xml</path>
+    <offsets>
+      <x-m>  0.089 </x-m>
+      <y-m>  0.138 </y-m>
+      <z-m> -0.186 </z-m>
+    </offsets>
+  </model>
+
+  <!-- UIZ -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uiz/uiz-1.xml</path>
+    <offsets>
+      <x-m>  0.086 </x-m>
+      <y-m> -0.155 </y-m>
+      <z-m>  0.067 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uiz/uiz-2.xml</path>
+    <offsets>
+      <x-m> 0.086 </x-m>
+      <y-m> 0.155 </y-m>
+      <z-m> 0.067 </z-m>
+    </offsets>
+  </model>
+
+  <!-- PSP -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/psp/psp.xml</path>
+    <offsets>
+      <x-m>  0.089 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.058 </z-m>
+    </offsets>
+  </model>
+
+  <!-- UT-7A -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/ut/ut7a-1.xml</path>
+    <offsets>
+      <x-m>  0.08699 </x-m>
+      <y-m> -0.12000 </y-m>
+      <z-m>  0.21000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/ut/ut7a-2.xml</path>
+    <offsets>
+      <x-m>  0.08699 </x-m>
+      <y-m>  0.12000 </y-m>
+      <z-m>  0.21000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- UVID 15M -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uvid-15/uvid-15m.xml</path>
+    <offsets>
+      <x-m>  0.08526 </x-m>
+      <y-m> -0.23607 </y-m>
+      <z-m> -0.05500 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uvid-15/uvid-15m-little.xml</path>
+    <offsets>
+      <x-m>  0.08800 </x-m>
+      <y-m> -0.44653 </y-m>
+      <z-m> -0.08243 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uvid-15/uvid-15m-little.xml</path>
+    <offsets>
+      <x-m>  0.08800 </x-m>
+      <y-m>  0.64347 </y-m>
+      <z-m> -0.08243 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.08694 </x-m>
+      <y-m> -0.43900 </y-m>
+      <z-m>  0.03400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> 0.08694 </x-m>
+      <y-m> 0.64100 </y-m>
+      <z-m> 0.03400 </z-m>
+    </offsets>
+  </model>
+
+  <!-- UAP -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uap/uap.xml</path>
+    <offsets>
+      <x-m>  0.08799 </x-m>
+      <y-m> -0.23700 </y-m>
+      <z-m>  0.21000 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
