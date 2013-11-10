@@ -2,14 +2,13 @@
 <!--
     ###################################################################
     #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,       #
-    #	2d & 3d instruments, animations, systems and over.            #
-    #    	yurik@megasignal.com                                  #
+    #	          2d & 3d instruments, animations, systems and over.  #
+    #             yurik@megasignal.com                                #
     #                                                                 #
     # Updated by Helijah August 2012                                  #
     ###################################################################
 -->
 
-<!-- Altimeter indicator 3D instrument for Tu-154 -->
 <PropertyList>
 
   <path>ai2.ac</path>
@@ -48,6 +47,16 @@
     <object-name>vitre</object-name>
     <object-name>vitre2</object-name>
   </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitre</object-name>
+    <object-name>vitre2</object-name>
+  </effect>
 
   <animation>
     <type>material</type>

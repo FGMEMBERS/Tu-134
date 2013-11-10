@@ -1,47 +1,91 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> 
 
-<!--
-  Tupolev Tu 134 - 2012 - Emmanuel BARANGER with Melchior script
+<!-- YASim Aerodynamic Model for the Tupolev Tu-134 : 2012 - Emmanuel BARANGER with Melchior script
+           2013 : Artem Kovalchuk aka 'Cossack'
+           2013 : Gary Buckaroo aka 'buckaroo'
 
-  source        : http://en.wikipedia.org/wiki/Tupolev_Tu-134
+     Based on Tu-134A model:
+     Empty: 63934 lbs
+     Zero Fuel: ? lbs
+     Max Fuel load: 30867 lbs
+     Max Payload: 18075 lbs
+     Max Take-Off: 94798 lbs
+     Max Land: 94798 lbs
+     Cruise: IAS 458 @ 35000'
 
-  Wingspan      :  29.00 m     (    95 ft 1 in )
-  lenght        :  37.10 m     (   121 ft 8 in )
-  height        :   9.02 m     (    29 ft 6 in )
-  Empty mass    :  27960 kg    ( 61640 lb      )
-  Engine        : 2 × Soloviev D-30-II turbofans (14990 lbf each)
-  Maximum speed : 950 km/h     (   485 kt      )
-  Cruise speed  : 850–900 km/h (   405 kt      )
+     Wingspan : 29.00 m ( 95 ft 1 in )
+     Lenght : 37.10 m ( 121 ft 8 in )
+     Height : 9.02 m ( 29 ft 6 in )
+     Engines : 2 Soloviev D-30-II turbofans (14990 lbf each)
+      
+   Buck notes:
+
+     Solution results: Iterations: 1521
+     Drag Coefficient: 13.120851
+     Lift Ratio: 87.304398
+     Cruise AoA: 2.479629
+     Tail Incidence: -0.809055
+     Approach Elevator: -0.543029
+     CG: x:-0.841, y:-0.000, z:-0.338
+
+     Inertia tensor : 605099.125, -0.006, 289699.250
+     [kg*m^2] -0.006, 2883673.000, 5325.141
+     Origo at CG 289699.250, 5325.141, 3217679.500
 -->
 
-<airplane mass="61640">
+<airplane mass="63934">
+  
+  <!-- Buck notes:
+  
+       Approach:
+       
+         I know the aircraft stalls around 110 knots, but I don't know at what weight, so it's not helpful.
+         I increased approach aoa to 4 for an airliner like this.
+         Fuel remaining should be much smaller than 0.7, maybe 0.2. It's unlikely that the typical landing configuration has 70% fuel remaining.
+         That will affect solved landing weight considerably.
+         Removed this: <control-setting axis="/surface-positions/flap-pos-norm" value="0.5"/> Surface positions are not control inputs and shouldn't be used that way.
+         They might even create some weird feedback effects. Not good.
+         Set flaps to max-down position (1) unless you are very sure this plane does not typically land with full flaps.
+         Added control sub-elements for spoilers.
+
+       Cruise:
+       
+         Throttle should be higher than 0.75 for a max-cruise configuration. I would probably use max throttle if I knew the aircraft's absolute top-end speed,
+         but here I'll try using 0.85. Added control sub-elements for spoilers.
+-->
 
   <!-- Approach configuration -->
-  <approach speed="120" aoa="8" fuel="0.7">
+  <approach speed="136" aoa="4" fuel="0.2">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
-    <control-setting axis="/controls/flight/flaps" value="0.5"/>
-    <control-setting axis="/surface-positions/flap-pos-norm" value="0.5"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
+    <control-setting axis="/controls/flight/slats" value="1"/>
+    <control-setting axis="/controls/flight/spoilers" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
   <!-- Cruise configuration -->
-  <cruise speed="405" alt="35000" fuel="0.7">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.75"/>
-    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+  <cruise speed="458" alt="35000" fuel="0.6">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.85"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.85"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
+    <control-setting axis="/controls/flight/spoilers" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
 
   <cockpit x="15.330" y="0.597" z="-0.293"/>
 
+  <!-- Buck notes:
+  
+       I reduced the width of the engine nacelle bodies. Air passes through these things and they have very little drag.
+  -->
   <fuselage ax=" 18.503" ay=" 0.000" az="-1.808" bx=" 13.635" by=" 0.000" bz="-1.217" width="3.000" taper="0.2" midpoint="1.0"/>
   <fuselage ax=" 13.635" ay=" 0.000" az="-1.217" bx=" -5.186" by=" 0.000" bz="-1.214" width="3.000" taper="1.0" midpoint="1.0"/>
   <fuselage ax=" -5.186" ay=" 0.000" az="-1.214" bx="-14.939" by=" 0.000" bz="-0.236" width="3.000" taper="0.2" midpoint="0.0"/>
 
   <!-- Engines -->
-  <fuselage ax=" -5.335" ay=" 2.368" az="-0.772" bx="-10.519" by=" 2.055" bz="-0.790" width="1.212" taper="0.9" midpoint="0.0"/>
-  <fuselage ax=" -5.335" ay="-2.368" az="-0.772" bx="-10.519" by="-2.055" bz="-0.790" width="1.212" taper="0.9" midpoint="0.0"/>
+  <fuselage ax=" -5.335" ay=" 2.368" az="-0.772" bx="-10.519" by=" 2.055" bz="-0.790" width="0.300" taper="0.9" midpoint="0.0"/>
+  <fuselage ax=" -5.335" ay="-2.368" az="-0.772" bx="-10.519" by="-2.055" bz="-0.790" width="0.300" taper="0.9" midpoint="0.0"/>
 
   <!-- Bossages -->
   <fuselage ax="  1.535" ay=" 4.781" az="-2.552" bx=" -5.321" by=" 4.781" bz="-2.552" width="1.212" taper="0.2" midpoint="0.7"/>
@@ -50,26 +94,44 @@
   <!-- Tail up -->
   <fuselage ax=" -9.587" ay=" 0.000" az=" 4.573" bx="-18.703" by=" 0.000" bz=" 4.573" width="0.450" taper="0.2" midpoint="0.5"/>
 
+
+  <!-- Buck notes:
+         A camber of 0.12 is high for an airliner. Stall aoa of 20 is likely way too high. I'd expect something in the 12 to 18 range, with 18 on the very high end.
+         Most airfoils begin stalling around 16 or so, and 20 is getting into the realm of low-aspect delta wings. This value affects YASim lift calculations, so for
+         this type of plane I'd guess on the low side, 14 or 15 maybe.
+
+         I couldn't find airfoil data for a Tu-134, but I'll bet the airfoil is similar to that used in the Sud Aviation Caravelle, a slightly older but similar type.
+         The Caravelle uses the NACA 65-212 modified. That airfoil has a critical alpha of about 14 degrees, a YASim camber of about 0.06, and a fairly sharp stall drop
+         (narrow stall width). So I'd suggest using a camber of 0.06, a stall width of 13 (slightly less than 14 for reasons I explain in my guides), and a width of 4. 
+
+         I'd increase the drag on wing flaps and reduce the lift slighlty. Most flaps are considerably more drag than lift. Something like lift="1.5" drag="2.5"
+
+         I suggest adding some wing twist. Most wings have an aerodynamic twist (wing tip airfoils different from root airfoils). Twist="-2" makes a reasonable guess.
+
+         Dihedral: In a real aircraft an anhedral is typically used to compensate for excessive roll-stability or dutch-rolling. YASim probably won't exhibit the same dutch-roll tendency, so using the true geometric anhedral might result in a more relaxed roll stability than the real plane has. I suggest maybe a slight increase, maybe 0 or 1.
+
+         The control input axis for slats should be "/controls/flight/slats", not a surface position. But I think the Tu-134 doesn't have slats. It's a cheap and easy to maintain design, but not very refined.
+  -->
   <wing x="1.056" y="1.127" z="-2.246"
         chord="7.982"
         length="15.5"
         taper="0.25"
         sweep="32"
-        dihedral="-1"
-        camber="0.12">
-        <stall aoa="20" width="8" peak="1.5"/>
-        <flap0 start="0.05" end="0.64" lift="1.6" drag="1.8"/>
+        dihedral="1"
+        incidence="0"
+        twist="-2"
+        camber="0.06">
+        <stall aoa="13" width="4" peak="1.5"/>
+        <flap0 start="0.05" end="0.64" lift="1.5" drag="2.5"/>
         <flap1 start="0.64" end="1" lift="1.3" drag="1.1"/>
-        <slat start="0" end="1" aoa="2" drag="1.2"/>
         <spoiler start="0.35" end="0.50" lift="0.3" drag="3.0"/>
-
+  
         <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
-        <control-input axis="/surface-positions/flap-pos-norm" control="SLAT"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
 
-        <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>  
+        <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/> 
         <control-output control="FLAP0" prop="/surface-positions/flaps-pos-norm"/>
         <control-output control="FLAP0" prop="/surface-positions/slats"/>
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
@@ -79,17 +141,23 @@
         <control-speed control="SPOILER" transition-time="5"/>
   </wing>
 
+  <!-- Buck notes:
+  
+         Hstab stall aoa should likely be higher than 15, at least 16 or so. In a conventional aircraft, you want the wing to stall before the stabilizer.
+         Also, it's common for these designs to have some undercamber on horizontal stabilizers, so I'd suggest camber="-0.06" or a little more.
+         That will help give good approach elevator results.
+         Lift adjusted to give good approach and still allow AP to function at cruise.
+  -->
   <hstab x="-13.752" y="0" z="4.509"
-         chord="4" 
-         length="7.3" 
-         taper="0.40"
-         sweep="35">
-         <stall aoa="18" width="2" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.5" drag="1.1"/>
-
+         chord="4.0"
+         length="7.47"
+         taper=".29"
+         sweep="35"
+         camber="-0.08">
+         <stall aoa="16" width="4" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.5" drag="1.3"/>
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
-
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
   </hstab>
 
@@ -100,36 +168,50 @@
          sweep="36">
          <stall aoa="16" width="2" peak="1.5"/>
          <flap0 start="0" end="1" lift="1.3" drag="1.1"/>
-
+  
          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
 
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
 
-  <!--  Soloviev D-30
-                 source       : http://en.wikipedia.org/wiki/Soloviev_D-30
+  <!-- Soloviev D-30
+       source : ...
 
-                 type         : Twin-spool non-afterburning turbofan
-                 power        : 23150 lbf
-                 weight       : 5082 lb (2305 kg)
-  -->  
-  <jet x="-7.877" y=" 2.231"  z="-0.770"
-       mass="5082"
+       type : Twin-spool non-afterburning turbofan
+       power : 23150 lbf
+       weight : 3417 lb (1550 kg)
+  --> 
+  <jet x="-7.877" y=" 2.231" z="-0.770"
+       mass="3417"
        thrust="23150"
        tsfc="0.65"
        epr="5.66">
-       <actionpt x="-10.519" y=" 2.055"  z="-0.790"/>
+       <actionpt x="-10.519" y=" 2.055" z="-0.790"/>
+       
+       <control-input axis="/controls/engines/engine[0]/throttle-fdm" control="THROTTLE"/>
        <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
+  
+       <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[0]"/>
+
+       <control-speed control="REVERSE_THRUST" transition-time="2"/>
   </jet>
 
-  <jet x="-7.877" y="-2.231"  z="-0.770"
-       mass="5082"
+  <jet x="-7.877" y="-2.231" z="-0.770"
+       mass="3417"
        thrust="23150"
        tsfc="0.65"
        epr="5.66">
-       <actionpt x="-10.519" y="-2.055"  z="-0.790"/>
+       <actionpt x="-10.519" y="-2.055" z="-0.790"/>
+       
+       <control-input axis="/controls/engines/engine[1]/throttle-fdm" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
        <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+  
+       <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[1]"/>
+
+       <control-speed control="REVERSE_THRUST" transition-time="2"/>
   </jet>
 
   <!-- Test rentree des roues
@@ -138,13 +220,13 @@
   <gear x="-5" y="-5" z="-9"/>
   -->
   <!-- nose -->
-  <gear x="14.426"  y="0.0" z="-4.450"
+  <gear x="14.426" y="0.0" z="-4.450"
         compression="0.75" 
         spring="0.7" 
         damp="4">
         <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-
+  
         <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
 
         <control-speed control="EXTEND" transition-time="7"/>
@@ -163,7 +245,7 @@
   </gear>
 
   <gear x="-0.963" y="-4.776" z="-4.387"
-        compression="1.1" 
+        compression="1.1"
         spring="1.8">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
@@ -174,10 +256,21 @@
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
-  <tank x="0.180" y=" 3.000" z="-2.300" jet="true" capacity="8950"/>
-  <tank x="0.180" y="-3.000" z="-2.300" jet="true" capacity="8950"/>
+  <!-- Buck notes:
 
-  <ballast x=" 19" y="0" z="-4" mass=" 6300"/>
-  <ballast x="-18" y="0" z=" 4" mass="-3000"/>
+       Outboard tank x positions would put them in front of the wings rather than inside the wings. Try x=-0.5 for a guess at outboard tank positions.
+  -->
+  <tank x="-0.5" y=" 6" z="-2.4" jet="true" capacity="11904"/>
+  <tank x=" 0.0" y=" 3" z="-2.5" jet="true" capacity=" 3968"/>
+  <tank x=" 0.0" y="-3" z="-2.5" jet="true" capacity=" 3968"/>
+  <tank x="-0.5" y="-6" z="-2.4" jet="true" capacity="11904"/>
+
+  <!-- Buck notes:
+
+       I'm not sure where the CG should be. A quick MAC calculation gives a guess at -0.9 or so, maybe slightly ahead of that.
+       I've seen pics of the Tu-134 sitting on its tail (oops!), so CG is probably really close to the main gear. I tried a single ballast and got good results.
+       I removed the z factor to help reduce assymetrical mass distribution results.
+  -->
+  <ballast x="15" y="0" z="0" mass="13900"/>
 
 </airplane>

@@ -2,23 +2,44 @@
 
 <PropertyList>
 
-   <key n="68">
-    <name>D</name>
-    <desc>Passenger door</desc>
-    <binding>
-     <command>nasal</command>
-     <script>doors.doorsystem.passengerexport();</script>
-    </binding>
-   </key>
-
-   <key n="100">
+  <key n="100">
     <name>d</name>
     <desc>Crew door</desc>
     <binding>
-     <command>nasal</command>
-     <script>doors.doorsystem.crewexport();</script>
+      <command>nasal</command>
+      <script>doors.crew.toggle();</script>
     </binding>
-   </key>
+  </key>
 
+  <key n="68">
+    <name>D</name>
+    <desc>Passenger door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.passenger.toggle();</script>
+    </binding>
+  </key>
+
+  <key n="127">
+    <name>Delete</name>
+    <desc>Toggle Reversers</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[0]/reverser</property>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[1]/reverser</property>
+    </binding>
+  </key>
+      
+  <key n="125">
+    <name>}</name>
+    <desc>Engine Autostart</desc>
+    <binding>
+      <command>nasal</command>
+      <script>engines.autostart();</script>
+    </binding>
+  </key>
+   
 </PropertyList>
-

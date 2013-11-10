@@ -45,6 +45,15 @@
     <object-name>vitre</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitre</object-name>
+  </effect>
+
   <!-- Internal instruments lighting -->
   <animation>
     <type>material</type>
@@ -370,4 +379,3 @@
   </animation>
 
 </PropertyList>
-

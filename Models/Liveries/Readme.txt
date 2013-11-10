@@ -1,14 +1,18 @@
-Air-Maroc
+Default
 
-These liveries were made by : Laurent HAYVEL 2009
+These liveries were made by : Emmanuel BARANGER 2013
 
-ECE
+aeroflot_new
 
-LGL
+aeroflot_old
 
-TRA
+rus_airforce
 
-These liveries were made by : Brett HARRISON 2009
+rus_navy
+
+utair
+
+These liveries were made by : COSSACK90 2013
 
 Thanks to him.
 

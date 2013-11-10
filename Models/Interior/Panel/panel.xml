@@ -185,5 +185,90 @@
     </offsets>
   </model>
 
-</PropertyList>
+  <!-- ARCHS -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/achs/achs.xml</path>
+    <offsets>
+      <x-m> 0.086 </x-m>
+      <y-m> 0.232 </y-m>
+      <z-m> 0.210 </z-m>
+    </offsets>
+  </model>
 
+  <!-- IDR -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/idr/idr.xml</path>
+    <offsets>
+      <x-m>  0.087 </x-m>
+      <y-m> -0.362 </y-m>
+      <z-m> -0.129 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/idr/idr.xml</path>
+    <offsets>
+      <x-m>  0.087 </x-m>
+      <y-m>  0.804 </y-m>
+      <z-m> -0.085 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.088 </x-m>
+      <y-m> -0.729 </y-m>
+      <z-m> -0.003 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> 0.364 </y-m>
+      <z-m> 0.212 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.087 </x-m>
+      <y-m> -0.640 </y-m>
+      <z-m>  0.034 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.087 </x-m>
+      <y-m> 0.439 </y-m>
+      <z-m> 0.034 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.086 </x-m>
+      <y-m> -0.360 </y-m>
+      <z-m>  0.028 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.086 </x-m>
+      <y-m>  0.725 </y-m>
+      <z-m> -0.052 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

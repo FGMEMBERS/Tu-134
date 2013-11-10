@@ -5,7 +5,7 @@
   <sim include="Nasal/views.xml">
 
     <description>Tu 134 (YASim)</description>
-    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <author>Emmanuel BARANGER (3D/FDM) Artem Kovalchuk (FDM)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
 
@@ -28,9 +28,10 @@
    </flaps>
   
     <model>
-      <path archive="y">Aircraft/Tu-134/Models/tu134.xml</path>
+      <path>Aircraft/Tu-134/Models/tu134.xml</path>
       <livery>
         <file type="string">default</file>
+        <noze>0</noze>
       </livery>
     </model>
 
@@ -44,14 +45,18 @@
         <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
         <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
         <int type="bool" n="6" alias="/smoke/active"> 0 </int>                     <!--  6 start smoke -->
-        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
-        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
+        <int type="int" n="7" alias="/smoke/particlepersec"> 50 </int>             <!--  7 particlepersec -->
+        <int type="int" n="8" alias="/sim/model/Livery/noze"> 1 </int>                    <!--  8 Noze type -->
+        <int type="int" n="10" alias="/controls/armament/trigger">0</int>          <!-- 10 reserved for bombable mode -->
         <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
         <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
-        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
-        <float n="3" alias="/smoke/colors/knob-red">1</float>                      <!-- 3 smoke mixer red setting -->
-        <float n="4" alias="/smoke/colors/knob-green">1</float>                    <!-- 4 smoke mixer green setting -->
-        <float n="5" alias="/smoke/colors/knob-blue">1</float>                     <!-- 5 smoke mixer blue setting -->
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                     <!--  2 altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft">  0 </float>                    <!--  3 altitude for smoke -->
+        <float n="6" alias="/engines/engine[0]/n2" />
+        <float n="7" alias="/engines/engine[1]/n2" />
+        <float n="8" alias="/controls/engines/engine[0]/throttle" />
+        <float n="9" alias="/controls/engines/engine[1]/throttle" />
+        <string n="0" type="string" />
         <string n="9" type="string" />                                             <!-- string[9] reserved for bombable mode -->
       </generic>
     </multiplay>
@@ -66,8 +71,20 @@
 
     <menubar include="Dialogs/tu134-menu.xml"/>
 
+    <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+    </systems>  
+
   </sim>
  
+  <instrumentation>
+    <idr-1>
+      <caged-flag type="bool" >true</caged-flag>
+    </idr-1>
+  </instrumentation>
+  
   <input>
     <keyboard include="Nasal/tu134-keyboard.xml"/>
   </input>
@@ -88,7 +105,13 @@
       <file>Aircraft/Tu-134/Nasal/altimeter.nas</file>
 <!--  <file>Aircraft/Tu-134/Nasal/immat.nas</file> -->
     </tu134>
+    <instruments>
+      <file>Aircraft/Tu-134/Nasal/idr.nas</file>
+    </instruments>
+    <engines>
+      <file>Aircraft/Generic/Engines/generic-yasim-engine.nas</file>
+      <file>Aircraft/Tu-134/Nasal/engines-yasim.nas</file>
+    </engines>
   </nasal>
    
 </PropertyList>
-

@@ -1,7 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList>
 
+  <!-- Cockpit -->
+  <!-- Seats -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/pilotseat.xml</path>
+    <offsets>
+      <x-m> -14.95405 </x-m>
+      <y-m>  -0.63414 </y-m>
+      <z-m>  -1.12807 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Seats/pilotseat.xml</path>
+    <offsets>
+      <x-m> -14.95405 </x-m>
+      <y-m>   0.63414 </y-m>
+      <z-m>  -1.12807 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cabine -->
   <!-- Left -->
   <model>
     <path>Aircraft/Tu-134/Models/Interior/Seats/seatL.xml</path>

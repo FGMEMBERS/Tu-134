@@ -6,10 +6,10 @@
   <sim>
 
     <description>Tu 134 (YASim)</description>
-    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <author>Emmanuel BARANGER (3D/FDM) Artem Kovalchuk (FDM)</author>
 
     <rating>
-      <FDM type="int">     1 </FDM>
+      <FDM type="int">     2 </FDM>
       <systems type="int"> 0 </systems>
       <cockpit type="int"> 0 </cockpit>
       <model type="int">   2 </model>
@@ -18,4 +18,3 @@
   </sim>
 
 </PropertyList>
-
