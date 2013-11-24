@@ -7,7 +7,7 @@
     <model>
       <livery>
         <name type="string">Ukrainian Navy</name>
-        <texture>Liveries/1024x1024/ua_navy.png</texture>
+        <texture>Liveries/2048x2048/ua_navy.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
@@ -23,5 +23,5 @@
     </model>
     
   </sim>
- 
+
 </PropertyList>

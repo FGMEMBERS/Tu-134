@@ -6,13 +6,20 @@ aeroflot_new
 
 aeroflot_old
 
+chernaflot
+
 rus_airforce
 
 rus_navy
+
+ua_air_force
+
+ua_gov
+
+ua_navy
 
 utair
 
 These liveries were made by : COSSACK90 2013
 
 Thanks to him.
-

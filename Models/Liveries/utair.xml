@@ -7,7 +7,7 @@
     <model>
       <livery>
         <name type="string">UTair</name>
-        <texture>Liveries/1024x1024/utair.png</texture>
+        <texture>Liveries/2048x2048/utair.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
@@ -18,7 +18,7 @@
           <green> 0.002 </green>
           <blue>  0.002 </blue>
         </emission>
-        <noze>2</noze>
+        <noze>1</noze>
       </livery>
     </model>
     

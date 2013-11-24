@@ -7,7 +7,7 @@
     <model>
       <livery>
         <name type="string">Russian Navy</name>
-        <texture>Liveries/1024x1024/rus_navy.png</texture>
+        <texture>Liveries/2048x2048/rus_navy.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>

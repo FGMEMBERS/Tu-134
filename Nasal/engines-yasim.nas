@@ -3,6 +3,7 @@ var engine1 = engines.Jet.new(0, 0, 0.01, 5.21, 3, 4, 2, 4);
 var engine2 = engines.Jet.new(1, 0, 0.01, 5.21, 3, 4, 2, 4);
 
 engine1.init();
+engine2.init();
 
 props.globals.initNode("/sim/autostart/started", 0, "BOOL");
 
@@ -34,7 +35,9 @@ var engstart = func {
 
 var engstop = func {
   eng1fueloff();
+  setprop("/controls/engines/engine[0]/throttle", 0);
   eng2fueloff();
+  setprop("/controls/engines/engine[1]/throttle", 0);
 }
 
 var autostart = func {
@@ -51,10 +54,7 @@ var autostart = func {
     gui.popupTip("Shutting Down...");
     setprop("/sim/model/autostart", 0);
     setprop("/sim/autostart/started", 0);
-    setprop("/controls/engines/engine[0]/throttle", 0);
-    setprop("/controls/engines/engine[1]/throttle", 0);
-    eng1fueloff();
-    eng2fueloff();
+    engstop();
   }
 }
 

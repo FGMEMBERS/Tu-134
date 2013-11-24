@@ -6,68 +6,155 @@
 
     <!-- Engine 1 -->
     <engine>
-      <name>start</name>
+      <name>start-inside0</name>
       <mode>once</mode>
-      <path>Aircraft//Tu-134//Sounds/start.wav</path>
+      <path>Aircraft/Tu-134//Sounds/start-in.wav</path>
       <condition>
-        <property>/controls/engines/engine[0]/starter</property>
+        <and>
+          <property>/controls/engines/engine[0]/starter</property>
+          <property>/sim/current-view/internal</property>
+        </and>
       </condition>
       <volume>
-        <property>engines/engine[0]/thrust-lbs</property>
-        <factor>0.000012</factor>
-        <min>0.1</min>
-        <max>0.2</max>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.03 </min>
+        <max> 0.07 </max>
       </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-   </engine>
-
-    <engine>
-      <name>shutdown</name>
-      <mode>once</mode>
-      <path>Aircraft/Tu-134/Sounds/shutdown.wav</path>
-      <condition>
-        <property>/controls/engines/engine[0]/cutoff</property> 
-      </condition>
-      <volume>
-        <factor>0.2</factor>
-      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+   
     <engine>
-      <name>engine</name>
-      <path>Aircraft/Tu-134/Sounds/running.wav</path>
-      <mode>looped</mode>
+      <name>start-outside0</name>
+      <mode>once</mode>
+      <path>Aircraft/Tu-134//Sounds/start-out.wav</path>
       <condition>
-        <property>/engines/engine[0]/running</property>
+        <and>
+          <property>/controls/engines/engine[0]/starter</property>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
       </condition>
-      <orientation>
-        <x>0.0</x>
-        <y>0.0</y>
-        <z>-180.0</z>
-        <inner-angle>180.0</inner-angle>
-        <outer-angle>360.0</outer-angle>
-        <outer-gain>0.2</outer-gain>
-      </orientation>
       <volume>
-        <property>engines/engine[0]/thrust-lbs</property>
-        <factor>0.000025</factor>
-        <min>0.2</min>
-        <max>0.75</max>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
       </volume>
       <pitch>
-        <property>engines/engine[0]/n1</property>
-        <ofset>0.1</ofset>
-        <factor>.001</factor>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
 
     <engine>
-      <name>whine</name>
+      <name>turbine-inside0</name>
+      <mode>looped</mode>
+      <path>Aircraft/Tu-134/Sounds/engine-in.wav</path>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.01</factor>
+        <min>0.03</min>
+        <max>0.07</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>0.9</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+  
+    <engine>
+      <name>turbine-outside0</name>
+      <mode>looped</mode>
+      <path>Aircraft/Tu-134/Sounds/engine-out.wav</path>
+      <condition>
+        <property>/engines/engine[0]/running</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>0.9</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+  
+    <engine>
+      <name>shutdown-inside0</name>
+      <mode>once</mode>
+      <path>Aircraft/Tu-134/Sounds/shutdown-in.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[0]/cutoff</property> 
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.01</factor>
+        <min>0.03</min>
+        <max>0.07</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <engine>
+      <name>shutdown-outside0</name>
+      <mode>once</mode>
+      <path>Aircraft/Tu-134/Sounds/shutdown-out.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[0]/cutoff</property> 
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <engine>
+      <name>whine0</name>
       <path>Aircraft/Tu-134/Sounds/whine.wav</path>
       <mode>looped</mode>
       <condition>
@@ -89,163 +176,167 @@
 
     <!-- Engine 2 -->
     <engine>
-      <name>start</name>
+      <name>start-inside1</name>
       <mode>once</mode>
-      <path>Aircraft//Tu-134//Sounds/start.wav</path>
+      <path>Aircraft/Tu-134//Sounds/start-in.wav</path>
       <condition>
-        <property>/controls/engines/engine[1]/starter</property>
+        <and>
+          <property>/controls/engines/engine[1]/starter</property>
+          <property>/sim/current-view/internal</property>
+        </and>
       </condition>
       <volume>
-        <property>engines/engine[1]/thrust-lbs</property>
-        <factor>0.000012</factor>
-        <min>0.1</min>
-        <max>0.2</max>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.03 </min>
+        <max> 0.07 </max>
       </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-   </engine>
-
-    <engine>
-      <name>shutdown</name>
-      <mode>once</mode>
-      <path>Aircraft/Tu-134/Sounds/shutdown.wav</path>
-      <condition>
-        <property>/controls/engines/engine[1]/cutoff</property> 
-      </condition>
-      <volume>
-        <factor>0.2</factor>
-      </volume>
+      <pitch>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+   
     <engine>
-      <name>engine</name>
-      <path>Aircraft/Tu-134/Sounds/running.wav</path>
-      <mode>looped</mode>
+      <name>start-outside1</name>
+      <mode>once</mode>
+      <path>Aircraft/Tu-134//Sounds/start-out.wav</path>
       <condition>
-        <property>/engines/engine[1]/running</property>
+        <and>
+          <property>/controls/engines/engine[1]/starter</property>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
       </condition>
-      <orientation>
-        <x>0.0</x>
-        <y>0.0</y>
-        <z>-180.0</z>
-        <inner-angle>180.0</inner-angle>
-        <outer-angle>360.0</outer-angle>
-        <outer-gain>0.2</outer-gain>
-      </orientation>
       <volume>
-        <property>engines/engine[1]/thrust-lbs</property>
-        <factor>0.000025</factor>
-        <min>0.2</min>
-        <max>0.75</max>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
       </volume>
       <pitch>
-        <property>engines/engine[1]/n1</property>
-        <ofset>0.1</ofset>
-        <factor>.001</factor>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
 
     <engine>
-      <name>whine</name>
-      <path>Aircraft/Tu-134/Sounds/whine.wav</path>
+      <name>turbine-inside1</name>
       <mode>looped</mode>
+      <path>Aircraft/Tu-134/Sounds/engine-in.wav</path>
       <condition>
-        <property>/engines/engine[1]/running</property>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <property>/sim/current-view/internal</property>
+        </and>
       </condition>
       <volume>
-        <property>engines/engine[1]/thrust-lbs</property>
-        <factor>0.010</factor>
-        <max>1.0</max>
-      </volume>
-      <pitch>
-        <property>engines/engine[1]/n1</property>
+        <property>/engines/engine[1]/n2</property>
         <factor>0.01</factor>
-        <offset>0.15</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine>
-
-    <!-- Engine 3 -->
-    <engine>
-      <name>start</name>
-      <mode>once</mode>
-      <path>Aircraft//Tu-134//Sounds/start.wav</path>
-      <condition>
-        <property>/controls/engines/engine[2]/starter</property>
-      </condition>
-      <volume>
-        <property>engines/engine[2]/thrust-lbs</property>
-        <factor>0.000012</factor>
-        <min>0.1</min>
-        <max>0.2</max>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-   </engine>
-
-    <engine>
-      <name>shutdown</name>
-      <mode>once</mode>
-      <path>Aircraft/Tu-134/Sounds/shutdown.wav</path>
-      <condition>
-        <property>/controls/engines/engine[2]/cutoff</property> 
-      </condition>
-      <volume>
-        <factor>0.2</factor>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine>
-
-    <engine>
-      <name>engine</name>
-      <path>Aircraft/Tu-134/Sounds/running.wav</path>
-      <mode>looped</mode>
-      <condition>
-        <property>/engines/engine[2]/running</property>
-      </condition>
-      <orientation>
-        <x>0.0</x>
-        <y>0.0</y>
-        <z>-180.0</z>
-        <inner-angle>180.0</inner-angle>
-        <outer-angle>360.0</outer-angle>
-        <outer-gain>0.2</outer-gain>
-      </orientation>
-      <volume>
-        <property>engines/engine[2]/thrust-lbs</property>
-        <factor>0.000025</factor>
-        <min>0.2</min>
-        <max>0.75</max>
+        <min>0.03</min>
+        <max>0.07</max>
       </volume>
       <pitch>
-        <property>engines/engine[2]/n1</property>
-        <ofset>0.1</ofset>
-        <factor>.001</factor>
+        <property>/engines/engine[1]/n2</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>0.9</max>
       </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+  
+    <engine>
+      <name>turbine-outside1</name>
+      <mode>looped</mode>
+      <path>Aircraft/Tu-134/Sounds/engine-out.wav</path>
+      <condition>
+        <property>/engines/engine[1]/running</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/n2</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>0.9</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+  
+    <engine>
+      <name>shutdown-inside1</name>
+      <mode>once</mode>
+      <path>Aircraft/Tu-134/Sounds/shutdown-in.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[1]/cutoff</property> 
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/n2</property>
+        <factor>0.01</factor>
+        <min>0.03</min>
+        <max>0.07</max>
+      </volume>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
 
     <engine>
-      <name>whine</name>
+      <name>shutdown-outside1</name>
+      <mode>once</mode>
+      <path>Aircraft/Tu-134/Sounds/shutdown-out.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[1]/cutoff</property> 
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <engine>
+      <name>whine1</name>
       <path>Aircraft/Tu-134/Sounds/whine.wav</path>
       <mode>looped</mode>
       <condition>
-        <property>/engines/engine[2]/running</property>
+        <property>/engines/engine[1]/running</property>
       </condition>
       <volume>
-        <property>engines/engine[2]/thrust-lbs</property>
+        <property>engines/engine[1]/thrust-lbs</property>
         <factor>0.010</factor>
         <max>1.0</max>
       </volume>
       <pitch>
-        <property>engines/engine[2]/n1</property>
+        <property>engines/engine[1]/n1</property>
         <factor>0.01</factor>
         <offset>0.15</offset>
       </pitch>

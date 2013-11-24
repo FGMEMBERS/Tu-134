@@ -6,8 +6,8 @@
     
     <model>
       <livery>
-        <name type="string">Russian Air Force</name>
-        <texture>Liveries/2048x2048/rus_air_force.png</texture>
+        <name type="string">Russian Air Force (Low)</name>
+        <texture>Liveries/1024x1024/rus_air_force.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
@@ -23,5 +23,5 @@
     </model>
     
   </sim>
-
+ 
 </PropertyList>
