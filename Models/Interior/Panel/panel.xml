@@ -271,4 +271,23 @@
     </offsets>
   </model>
 
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.087 </x-m>
+      <y-m> -0.247 </y-m>
+      <z-m>  0.125 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m> 0.087 </x-m>
+      <y-m> 0.247 </y-m>
+      <z-m> 0.125 </z-m>
+    </offsets>
+  </model>
+
 </PropertyList>

@@ -91,11 +91,15 @@
     <object-name>entreemoteurs</object-name>
     <object-name>heliceG</object-name>
     <object-name>heliceD</object-name>
-
+    <object-name>lightL</object-name>
+    <object-name>lightR</object-name>
+    
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
     <object-name>vitresnoze0</object-name>
     <object-name>vitreporte</object-name>
+    <object-name>glasslightL</object-name>
+    <object-name>glasslightR</object-name>
   </animation>
 
   <animation>
@@ -161,7 +165,9 @@
     <object-name>entreemoteurs</object-name>
     <object-name>heliceG</object-name>
     <object-name>heliceD</object-name>
-
+    <object-name>lightL</object-name>
+    <object-name>lightR</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
@@ -274,6 +280,8 @@
     <object-name>vitres</object-name>
     <object-name>vitresnoze0</object-name>
     <object-name>vitreporte</object-name>
+    <object-name>glasslightL</object-name>
+    <object-name>glasslightR</object-name>
   </animation>
 
   <animation>
@@ -281,6 +289,8 @@
     <object-name>vitres</object-name>
     <object-name>vitresnoze0</object-name>
     <object-name>vitreporte</object-name>
+    <object-name>glasslightL</object-name>
+    <object-name>glasslightR</object-name>
   </animation>
 
   <!-- working for Rembrandt -->
@@ -292,6 +302,8 @@
     <object-name>vitres</object-name>
     <object-name>vitresnoze0</object-name>
     <object-name>vitreporte</object-name>
+    <object-name>glasslightL</object-name>
+    <object-name>glasslightR</object-name>
   </effect>
 
   <!-- Une ombre pour OSG -->
@@ -315,7 +327,7 @@
     <object-name>vitresnoze0</object-name>
     <condition>
       <equals>
-        <property>sim/model/livery/noze</property>
+        <property>sim/multiplay/generic/int[8]</property>
         <value>0</value>
       </equals>
     </condition>
@@ -326,7 +338,7 @@
     <object-name>noze1</object-name>
     <condition>
       <equals>
-        <property>sim/model/livery/noze</property>
+        <property>sim/multiplay/generic/int[8]</property>
         <value>1</value>
       </equals>
     </condition>
@@ -337,28 +349,11 @@
     <object-name>noze2</object-name>
     <condition>
       <equals>
-        <property>sim/model/livery/noze</property>
+        <property>sim/multiplay/generic/int[8]</property>
         <value>2</value>
       </equals>
     </condition>
   </animation>
-
-  <!-- Rentree des roues Temporairement disparition/apparition des roues
-  <animation>
-    <type>select</type>
-    <object-name>roueG1</object-name>
-    <object-name>roueG2</object-name>
-    <object-name>roueD1</object-name>
-    <object-name>roueD2</object-name>
-    <condition>
-      <not>
-        <equals>
-          <property>gear/gear[0]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </not>
-    </condition>
-  </animation> -->
 
   <!-- Effets sur le sol -->
   <!-- Roue avant -->
@@ -1405,45 +1400,74 @@
     </offsets>
   </model>
 
-  <!-- Light cone left
+  <!-- Light cone left -->
   <model>
-    <name>Left-Taxi-Light</name>
     <path>Aircraft/Tu-134/Models/lights/light-cone.xml</path>
     <offsets>
-      <x-m>         -16.04573 </x-m>
-      <y-m>          -0.94337 </y-m>
-      <z-m>          -2.27202 </z-m>
-      <pitch-deg>    -7.5 </pitch-deg>
+      <x-m>      -16.04573 </x-m>
+      <y-m>       -0.94337 </y-m>
+      <z-m>       -2.27202 </z-m>
+      <pitch-deg> -7.5 </pitch-deg>
     </offsets>
-  </model> -->
+  </model>
 
-  <!-- Light cone right
+  <!-- Light cone right -->
   <model>
-    <name>Right-Taxi-Light</name>
     <path>Aircraft/Tu-134/Models/lights/light-cone.xml</path>
     <offsets>
-      <x-m>         -16.04573 </x-m>
-      <y-m>           0.94337 </y-m>
-      <z-m>          -2.27202 </z-m>
-      <pitch-deg>    -7.5 </pitch-deg>
+      <x-m>      -16.04573 </x-m>
+      <y-m>        0.94337 </y-m>
+      <z-m>       -2.27202 </z-m>
+      <pitch-deg> -7.5 </pitch-deg>
     </offsets>
   </model>
 
   <animation>
-    <name>All-Taxi-Light</name>
-    <object-name>Left-Taxi-Light</object-name>
-    <object-name>Right-Taxi-Light</object-name>
+    <name>LampeGauche</name>
+    <object-name>lightL</object-name>
+    <object-name>glasslightL</object-name>
   </animation>
-
+  
   <animation>
-    <type>select</type>
-    <object-name>All-Taxi-Light</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/landing-light</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation> -->
-
+    <type>rotate</type>
+    <object-name>LampeGauche</object-name>
+    <property>/controls/lighting/landing-lights</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -90</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -16.16749 </x1-m>
+      <y1-m>  -0.83178 </y1-m>
+      <z1-m>  -2.24425 </z1-m>
+      <x2-m> -16.16749 </x2-m>
+      <y2-m>  -0.86873 </y2-m>
+      <z2-m>  -2.20041 </z2-m>
+    </axis>
+  </animation>
+      
+  <animation>
+    <name>LampeDroite</name>
+    <object-name>lightR</object-name>
+    <object-name>glasslightR</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>LampeDroite</object-name>
+    <property>/controls/lighting/landing-lights</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -90</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -16.16749 </x1-m>
+      <y1-m>   0.86873 </y1-m>
+      <z1-m>  -2.20041 </z1-m>
+      <x2-m> -16.16749 </x2-m>
+      <y2-m>   0.83178 </y2-m>
+      <z2-m>  -2.24425 </z2-m>
+    </axis>
+  </animation>
+      
 </PropertyList>

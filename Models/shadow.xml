@@ -35,7 +35,7 @@
     <object-name>shadownoze0</object-name>
     <condition>
       <equals>
-        <property>sim/model/livery/noze</property>
+        <property>sim/multiplay/generic/int[8]</property>
         <value>0</value>>
       </equals>
     </condition>
@@ -46,7 +46,7 @@
     <object-name>shadownoze1</object-name>
     <condition>
       <equals>
-        <property>sim/model/livery/noze</property>
+        <property>sim/multiplay/generic/int[8]</property>
         <value>1</value>>
       </equals>
     </condition>
@@ -57,7 +57,7 @@
     <object-name>shadownoze2</object-name>
     <condition>
       <equals>
-        <property>sim/model/livery/noze</property>
+        <property>sim/multiplay/generic/int[8]</property>
         <value>2</value>>
       </equals>
     </condition>

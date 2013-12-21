@@ -7,6 +7,7 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
+    <object-name>nezinterieur</object-name>
     <object-name>planchet</object-name>
     <object-name>inttour</object-name>
     <object-name>inttournoze0</object-name>
@@ -79,10 +80,11 @@
   <animation>
     <type>select</type>
     <object-name>inttournoze0</object-name>
+    <object-name>nezinterieur</object-name>
     <object-name>intvitresnoze0</object-name>
     <condition>
       <equals>
-        <property>/sim/model/livery/noze</property>
+        <property>sim/multiplay/generic/int[8]</property>
         <value>0</value>
       </equals>
     </condition>

@@ -6,13 +6,25 @@ aeroflot_new
 
 aeroflot_old
 
+airkoryo
+
 chernaflot
 
-rus_airforce
+lot
+
+nordavia
+
+pulkovo
+
+rossiya
+
+rus_air_force
 
 rus_navy
 
 ua_air_force
+
+ua_armed_force
 
 ua_gov
 

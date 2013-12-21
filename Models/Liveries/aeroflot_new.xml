@@ -14,13 +14,18 @@
           <blue>  0.3 </blue>
         </specular>
         <emission>
-          <red>   0.002 </red>
-          <green> 0.002 </green>
-          <blue>  0.002 </blue>
+          <red>   0.02 </red>
+          <green> 0.02 </green>
+          <blue>  0.02 </blue>
         </emission>
-        <noze>1</noze>
       </livery>
+      <noze>1</noze>
     </model>
+    <multiplay>
+      <generic>
+        <int n="8">1</int>
+      </generic>
+    </multiplay>
     
   </sim>
 

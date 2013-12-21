@@ -42,4 +42,13 @@
     </binding>
   </key>
    
+  <key n="108">
+    <name>l</name>
+    <desc>Landing light</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/lighting/landing-lights</property>
+    </binding>
+  </key>
+   
 </PropertyList>

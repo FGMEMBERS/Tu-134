@@ -18,9 +18,14 @@
           <green> 0.002 </green>
           <blue>  0.002 </blue>
         </emission>
-        <noze>1</noze>
       </livery>
+      <noze>1</noze>
     </model>
+    <multiplay>
+      <generic>
+        <int n="8">1</int>
+      </generic>
+    </multiplay>
     
   </sim>
  
