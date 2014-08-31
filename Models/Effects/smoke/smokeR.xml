@@ -12,16 +12,18 @@
     <condition>
       <and>
         <greater-than>
-          <property>sim/multiplay/generic/float[7]</property>
+          <!-- /engines/engine[1]/n2 -->
+          <property>sim/multiplay/generic/float[5]</property>
           <value>75</value>
         </greater-than>
         <less-than>
+          <!-- /position/altitude-ft -->
           <property>sim/multiplay/generic/float[3]</property>
           <value>3000</value>
         </less-than>
       </and>
     </condition>
-
+    
     <attach>world</attach>
 
     <placer>

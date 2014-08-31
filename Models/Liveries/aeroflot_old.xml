@@ -8,18 +8,13 @@
       <livery>
         <name type="string">Aeroflot 1977</name>
         <texture>Liveries/2048x2048/aeroflot_old.png</texture>
-        <specular>
-          <red>   0.3 </red>
-          <green> 0.3 </green>
-          <blue>  0.3 </blue>
-        </specular>
         <emission>
           <red>   0.02 </red>
           <green> 0.02 </green>
           <blue>  0.02 </blue>
         </emission>
+        <noze>0</noze>
       </livery>
-      <noze>0</noze>
     </model>
     <multiplay>
       <generic>

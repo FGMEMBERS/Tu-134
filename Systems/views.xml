@@ -11,8 +11,8 @@
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y">   0.42604 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -0.64156 </y-offset-m> <!-- Up    -->
+      <x-offset-m archive="y">   0.47156 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  -0.42604 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -15.17172 </z-offset-m> <!-- Back  -->
       <pitch-offset-deg> 2 </pitch-offset-deg>
       <default-field-of-view-deg> 80 </default-field-of-view-deg>
@@ -53,6 +53,7 @@
   </view>
 
   <view n="0">
+    <name>Capitan Seat View</name>
     <internal archive="y">true</internal>
     <config>
       <x-offset-m archive="y">  -0.47156 </x-offset-m> <!-- Right -->
@@ -100,4 +101,3 @@
   </view>
 
 </PropertyList>
-

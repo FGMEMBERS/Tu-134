@@ -8,22 +8,17 @@
       <livery>
         <name type="string">Russian Air Force</name>
         <texture>Liveries/2048x2048/rus_air_force.png</texture>
-        <specular>
-          <red>   0.3 </red>
-          <green> 0.3 </green>
-          <blue>  0.3 </blue>
-        </specular>
         <emission>
           <red>   0.02 </red>
           <green> 0.02 </green>
           <blue>  0.02 </blue>
         </emission>
+        <noze>2</noze>
       </livery>
-      <noze>1</noze>
     </model>
     <multiplay>
       <generic>
-        <int n="8">1</int>
+        <int n="8">2</int>
       </generic>
     </multiplay>
     

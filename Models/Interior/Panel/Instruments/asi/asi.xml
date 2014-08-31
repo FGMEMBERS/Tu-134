@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
-    #############################################################################
-    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,                 #
-    #             2d & 3d instruments, animations, systems and over.            #
-    #             yurik@megasignal.com                                          #
-    #                                                                           #
-    # Updated by Helijah August 2013                                            #
-    #############################################################################	  
+#############################################################################
+#    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,                 #
+#             2d & 3d instruments, animations, systems and over.            #
+#             yurik@megasignal.com                                          #
+#                                                                           #
+# Updated by Helijah August 2013                                            #
+#                    August 2014                                            #
+#############################################################################   
 -->
 
 <PropertyList>
@@ -14,41 +15,25 @@
   <path>asi.ac</path>
   
   <animation>
-    <object-name>fond</object-name>
-
-    <object-name>base</object-name>
-    <object-name>index</object-name>
+    <object-name>fond</object-name>   
+    <object-name>face</object-name>
     <object-name>needle</object-name>
-
+    <object-name>index</object-name>
+    
     <object-name>vitre</object-name>
   </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Tu-134/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-
+  
   <animation>
     <type>material</type>
-    <object-name>base</object-name>
-    <object-name>index</object-name>
+    <object-name>face</object-name>
     <object-name>needle</object-name>
+    <object-name>index</object-name>
     <emission>
       <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
@@ -56,7 +41,7 @@
       <blue>  0.25 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
@@ -77,7 +62,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>index</object-name>
@@ -99,5 +84,5 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>

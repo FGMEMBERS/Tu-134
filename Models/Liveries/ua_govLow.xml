@@ -8,18 +8,13 @@
       <livery>
         <name type="string">Ukraine Government (Low)</name>
         <texture>Liveries/1024x1024/ua_gov.png</texture>
-        <specular>
-          <red>   0.3 </red>
-          <green> 0.3 </green>
-          <blue>  0.3 </blue>
-        </specular>
         <emission>
           <red>   0.002 </red>
           <green> 0.002 </green>
           <blue>  0.002 </blue>
         </emission>
+        <noze>0</noze>
       </livery>
-      <noze>0</noze>
     </model>
     <multiplay>
       <generic>

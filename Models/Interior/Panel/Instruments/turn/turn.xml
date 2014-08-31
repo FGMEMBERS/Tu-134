@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
-    #############################################################################
-    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM,                 #
-    #             2d & 3d instruments, animations, systems and over.            #
-    #             yurik@megasignal.com                                          #
-    #                                                                           #
-    # Updated by Helijah 2013                                                   #
-    #############################################################################  
+#############################################################################
+#    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM,                 #
+#             2d & 3d instruments, animations, systems and over.            #
+#             yurik@megasignal.com                                          #
+#                                                                           #
+# Updated by Helijah 2013                                                   #
+#                    August 2014                                            #
+#############################################################################  
 -->
 
 <PropertyList>
   
   <path>turn.ac</path>
-   
+  
   <animation>
     <object-name>fond</object-name>
     
@@ -22,28 +23,13 @@
     
     <object-name>vitre</object-name>
   </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Tu-134/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-
+  
   <animation>
     <type>material</type>
     <object-name>face</object-name>
@@ -56,12 +42,12 @@
       <blue>  0.25 </blue>
     </emission>
   </animation>
-
+  
   <!--Needle-->
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+    <property>/instrumentation/turn-indicator/indicated-turn-rate</property>
     <interpolation>
       <entry><ind> -1.13 </ind><dep> -35.5 </dep></entry>
       <entry><ind>  1.13 </ind><dep>  35.5 </dep></entry>
@@ -77,11 +63,11 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>ball</object-name>
-    <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
     <interpolation>
       <entry><ind> -3 </ind><dep> -10 </dep></entry>
       <entry><ind>  3 </ind><dep>  10 </dep></entry>
@@ -97,5 +83,5 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>

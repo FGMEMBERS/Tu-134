@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
-    #############################################################################
-    #    (C) 2007 by Yurik V. Nikiforoff                                        #
-    #             yurik@megasignal.com                                          #
-    #             Jul 2007                                                      #
-    #                                                                           #
-    # Updated by Helijah 2013                                                   #
-    #############################################################################
+#############################################################################
+#    (C) 2007 by Yurik V. Nikiforoff                                        #
+#             yurik@megasignal.com                                          #
+#             Jul 2007                                                      #
+#                                                                           #
+# Updated by Helijah 2013                                                   #
+#                    August 2014                                            #
+#############################################################################
 -->
-
 <PropertyList>
   
   <path>achs.ac</path>
-
+  
   <animation>
     <object-name>fond</object-name>
     <object-name>buttonL</object-name>
@@ -25,31 +25,16 @@
     <object-name>timer_min_needle</object-name>
     <object-name>timer_hour_needle</object-name>
     <object-name>secundomer_needle</object-name>
-
+    
     <object-name>vitre</object-name>
   </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Tu-134/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-
+  
   <animation>
     <type>material</type>
     <object-name>face</object-name>
@@ -66,7 +51,7 @@
       <blue>  0.25 </blue>
     </emission>
   </animation>
-
+  
   <!--Needles-->
   <animation>
     <type>rotate</type>
@@ -91,7 +76,7 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>min_needle</object-name>
@@ -115,5 +100,5 @@
       <z> 0 </z>
     </axis>
   </animation>
- 
+  
 </PropertyList>

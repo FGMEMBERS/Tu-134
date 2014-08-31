@@ -3,7 +3,8 @@
 <!-- YASim Aerodynamic Model for the Tupolev Tu-134 : 2012 - Emmanuel BARANGER with Melchior script
            2013 : Artem Kovalchuk aka 'Cossack'
            2013 : Gary Buckaroo aka 'buckaroo'
-
+           2014 : Artem Kovalchuk aka 'Cossack' / Emmanuel BARANGER
+           
      Based on Tu-134A model:
      Empty: 63934 lbs
      Zero Fuel: ? lbs
@@ -33,7 +34,7 @@
      Origo at CG 289699.250, 5325.141, 3217679.500
 -->
 
-<airplane mass="63934">
+<airplane mass="63934" version="YASIM_VERSION_CURRENT">
   
   <!-- Buck notes:
   
@@ -62,6 +63,8 @@
     <control-setting axis="/controls/flight/slats" value="1"/>
     <control-setting axis="/controls/flight/spoilers" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
+    <solve-weight idx="0" weight="1"/>
+    <solve-weight idx="1" weight="1"/>
   </approach>
 
   <!-- Cruise configuration -->
@@ -71,6 +74,8 @@
     <control-setting axis="/controls/flight/flaps" value="0"/>
     <control-setting axis="/controls/flight/spoilers" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
+    <solve-weight idx="0" weight="1"/>
+    <solve-weight idx="1" weight="1"/>
   </cruise>
 
   <cockpit x="15.330" y="0.597" z="-0.293"/>
@@ -124,7 +129,7 @@
         <stall aoa="13" width="4" peak="1.5"/>
         <flap0 start="0.05" end="0.64" lift="1.5" drag="2.5"/>
         <flap1 start="0.64" end="1" lift="1.3" drag="1.1"/>
-        <spoiler start="0.35" end="0.50" lift="0.3" drag="3.0"/>
+        <spoiler start="0.35" end="0.50" lift="0.3" drag="3"/>
   
         <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
@@ -151,7 +156,7 @@
   <hstab x="-13.752" y="0" z="4.509"
          chord="4.0"
          length="7.47"
-         taper=".29"
+         taper="0.29"
          sweep="35"
          camber="-0.08">
          <stall aoa="16" width="4" peak="1.5"/>
@@ -219,11 +224,13 @@
   <gear x="-5" y=" 5" z="-9"/>
   <gear x="-5" y="-5" z="-9"/>
   -->
-  <!-- nose -->
+  <!-- 0 nose -->
   <gear x="14.426" y="0.0" z="-4.450"
         compression="0.75" 
-        spring="0.7" 
-        damp="4">
+        spring="2"
+        damp="2"
+        sfric="1.5"
+        dfric="1">
         <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   
@@ -232,9 +239,12 @@
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
-  <gear x="-0.963" y="4.776" z="-4.387"
+  <!-- 1 Left -->
+  <gear x="-0.3585" y="4.7760" z="-4.3869"
         compression="1.1" 
-        spring="1.8">
+        spring="1"
+        sfric=".5"
+        dfric="0.4">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -244,9 +254,12 @@
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
-  <gear x="-0.963" y="-4.776" z="-4.387"
+  <!-- 2 Right -->
+  <gear x="-0.3585" y="-4.7760" z="-4.3869"
         compression="1.1"
-        spring="1.8">
+        spring="1"
+        sfric=".5"
+        dfric="0.4">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -256,21 +269,56 @@
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
+  <!-- 3 Left rear -->
+  <gear x="-1.5681" y="4.7760" z="-4.3869"
+        compression="1.1"
+        spring="1"
+        sfric=".5"
+        dfric="0.4">
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
+  </gear>
+
+  <!-- 4 Right rear -->
+  <gear x="-1.5681" y="-4.7760" z="-4.3869"
+        compression="1.1"
+        spring="1"
+        sfric=".5"
+        dfric="0.4">
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[4]/position-norm"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
+  </gear>
+
   <!-- Buck notes:
 
        Outboard tank x positions would put them in front of the wings rather than inside the wings. Try x=-0.5 for a guess at outboard tank positions.
   -->
-  <tank x="-0.5" y=" 6" z="-2.4" jet="true" capacity="11904"/>
-  <tank x=" 0.0" y=" 3" z="-2.5" jet="true" capacity=" 3968"/>
-  <tank x=" 0.0" y="-3" z="-2.5" jet="true" capacity=" 3968"/>
-  <tank x="-0.5" y="-6" z="-2.4" jet="true" capacity="11904"/>
-
+  <tank x="-5.0" y=" 11.5" z="-2.3" jet="true" capacity="1644" mass-prop="/sim/fuel[0]/weight-lb"/>
+  <tank x="-2.9" y="  8.0" z="-2.3" jet="true" capacity="7000" mass-prop="/sim/fuel[1]/weight-lb"/>
+  <tank x="-0.0" y="  3.0" z="-2.4" jet="true" capacity="3130" mass-prop="/sim/fuel[2]/weight-lb"/> 
+  <tank x="-0.0" y="  0.0" z="-2.5" jet="true" capacity="2142" mass-prop="/sim/fuel[3]/weight-lb"/> 
+  <tank x="-0.5" y=" -3.0" z="-2.4" jet="true" capacity="3130" mass-prop="/sim/fuel[4]/weight-lb"/> 
+  <tank x="-2.9" y=" -8.0" z="-2.3" jet="true" capacity="7000" mass-prop="/sim/fuel[5]/weight-lb"/> 
+  <tank x="-5.0" y="-11.5" z="-2.3" jet="true" capacity="1644" mass-prop="/sim/fuel[6]/weight-lb"/> 
+  
   <!-- Buck notes:
 
        I'm not sure where the CG should be. A quick MAC calculation gives a guess at -0.9 or so, maybe slightly ahead of that.
        I've seen pics of the Tu-134 sitting on its tail (oops!), so CG is probably really close to the main gear. I tried a single ballast and got good results.
        I removed the z factor to help reduce assymetrical mass distribution results.
   -->
-  <ballast x="15" y="0" z="0" mass="13900"/>
+  <ballast x="14" y="0" z="0" mass="19900"/>
 
+  <!-- Crew -->
+  <weight x="14" y="0" z="-2.0" mass-prop="/sim/weight[0]/weight-lb"/>
+  <!-- Crude initial positioning of cargo/passengers. Would like to itemize this by location later. -->
+  <!-- Cargo/Passengers -->
+  <weight x=" 2" y="0" z="-2.3" mass-prop="/sim/weight[1]/weight-lb"/>
+  
 </airplane>

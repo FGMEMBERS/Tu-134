@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
-    ###################################################################
-    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,       #
-    #	          2d & 3d instruments, animations, systems and over.  #
-    #             yurik@megasignal.com                                #
-    #                                                                 #
-    # Updated by Helijah August 2012                                  #
-    ###################################################################
+###################################################################
+#    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,       #
+#           2d & 3d instruments, animations, systems and over.    #
+#             yurik@megasignal.com                                #
+#                                                                 #
+# Updated by Helijah August 2012                                  #
+#                    August 2014                                  #
+###################################################################
 -->
 
 <PropertyList>
-
+  
   <path>ai2.ac</path>
-
+  
   <animation>
     <object-name>fond</object-name>
     <object-name>fond2</object-name>
     <object-name>knobs</object-name>
     <object-name>ball</object-name>
     <object-name>center</object-name>
-
+    
     <object-name>marker</object-name>
     <object-name>face</object-name>
     <object-name>cache</object-name>
@@ -29,35 +30,18 @@
     <object-name>barrehorizontal</object-name>
     <object-name>craft</object-name>
     <object-name>pointer</object-name>
-
+    
     <object-name>vitre</object-name>
     <object-name>vitre2</object-name>
   </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitre</object-name>
-    <object-name>vitre2</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-    <object-name>vitre2</object-name>
-  </animation>
-
+  
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Tu-134/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
     <object-name>vitre2</object-name>
   </effect>
-
+  
   <animation>
     <type>material</type>
     <object-name>marker</object-name>
@@ -76,7 +60,7 @@
       <blue>  0.25 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>craft</object-name>
@@ -106,6 +90,20 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
+  <animation>
+    <type>translate</type>
+    <object-name>ball</object-name>
+    <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <interpolation>
+      <entry><ind> -3 </ind><dep>  0.0178 </dep></entry>
+      <entry><ind>  3 </ind><dep> -0.0178 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
 </PropertyList>
-

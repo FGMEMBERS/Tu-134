@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Tu 134</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>d</name>
+    <desc>Open/Close door</desc>
+  </key>
+  <key>
+    <name>j</name>
+    <desc>Spoiler down</desc>
+  </key>
+  <key>
+    <name>k</name>
+    <desc>Spoiler up</desc>
+  </key>
+  <key>
+    <name>DELETE</name>
+    <desc>reverse thrust</desc>
+  </key>
+  <key>
+    <name>l</name>
+    <desc>Landing light On/Off</desc>
+  </key>
+  
+</PropertyList>

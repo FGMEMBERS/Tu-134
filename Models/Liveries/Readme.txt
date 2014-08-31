@@ -8,9 +8,13 @@ aeroflot_old
 
 airkoryo
 
-chernaflot
+csa
+
+interflug
 
 lot
+
+malev
 
 nordavia
 
@@ -22,9 +26,7 @@ rus_air_force
 
 rus_navy
 
-ua_air_force
-
-ua_armed_force
+ua_armed_forces
 
 ua_gov
 
@@ -32,6 +34,8 @@ ua_navy
 
 utair
 
-These liveries were made by : COSSACK90 2013
+wizzair
+
+These liveries were made by : COSSACK90 2013/2014
 
 Thanks to him.
