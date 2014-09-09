@@ -1,0 +1,92 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+OBJECT world
+kids 4
+OBJECT poly
+name "shadow"
+loc 0 0 -0
+data 6
+shadow
+texture "shadow.png"
+texrep 1.000000 1.000000
+crease 30.000001
+numvert 4
+16.694923 0 -14.499997
+16.694921 0 14.499997
+-16.694927 0 14.499995
+-16.69492 0 -14.500003
+numsurf 1
+SURF 0x10
+mat 0
+refs 4
+0 0.999999940395 0.999999761581
+3 0.000000192224 1
+2 0 0.000000065188
+1 0.999999940395 0
+kids 0
+OBJECT poly
+name "shadownoze0"
+loc 0 0 -0
+data 11
+shadownoze0
+texture "nozes.png"
+texrep 1.000000 1.000000
+crease 30.000001
+numvert 4
+-16.647617 0 -1.406888
+-16.647617 0 1.406884
+-20.353657 0 1.406884
+-20.353649 0 -1.406889
+numsurf 1
+SURF 0x10
+mat 0
+refs 4
+0 0.227417081594 0.999999582767
+3 0.000002125979 1
+2 0 0
+1 0.227417081594 0
+kids 0
+OBJECT poly
+name "shadownoze1"
+loc 0 0 -0
+data 11
+shadownoze1
+texture "nozes.png"
+texrep 1.000000 1.000000
+crease 30.000001
+numvert 4
+-16.647617 0 -1.406888
+-16.647617 0 1.406884
+-20.391052 0 1.406884
+-20.391045 0 -1.406889
+numsurf 1
+SURF 0x10
+mat 0
+refs 4
+0 0.477557718754 0.999999701977
+3 0.243944063783 1
+2 0.243943706155 0.000000138185
+1 0.477557718754 0
+kids 0
+OBJECT poly
+name "shadownoze2"
+loc 0 0 -0
+data 11
+shadownoze2
+texture "nozes.png"
+texrep 1.000000 1.000000
+crease 30.000001
+numvert 4
+-16.647617 0 -1.406887
+-16.647617 0 1.406886
+-24.841923 0 1.406886
+-24.841915 0 -1.406887
+numsurf 1
+SURF 0x10
+mat 0
+refs 4
+0 1 0.999999701977
+3 0.491048812866 1
+2 0.491048455238 0.000000138185
+1 1 0
+kids 0

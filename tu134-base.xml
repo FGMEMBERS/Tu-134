@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <sim include="Systems/views.xml">
+
+    <description>Tu 134 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM) Artem Kovalchuk and Gary Buckaroo (FDM)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>0.5</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Tu-134/tu134-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Tu-134/Sounds/tu134-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Tu-134/Models/tu134.xml</path>
+      <livery>
+        <file type="string">default</file>
+        <noze>1</noze>
+      </livery>
+    </model>
+    
+    <flaps>
+      <setting>0.0</setting> <!--  0 deg -->
+      <setting>0.2</setting> <!-- 10 deg -->
+      <setting>0.4</setting> <!-- 15 deg -->
+      <setting>0.6</setting> <!-- 20 deg -->
+      <setting>0.8</setting> <!-- 25 deg -->
+      <setting>1.0</setting> <!-- 30 deg -->
+    </flaps>
+    
+    <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+    </systems>  
+    
+    <instrumentation>
+      <path>Aircraft/Tu-134/Systems/instrumentation.xml</path>
+    </instrumentation>
+    
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int   n="0"  type="int">0</int>                                        <!--  0 immat -->
+        <int   n="1"  type="int">0</int>                                        <!--  1 immat -->
+        <int   n="2"  type="int">0</int>                                        <!--  2 immat -->
+        <int   n="3"  type="int">0</int>                                        <!--  3 immat -->
+        <int   n="4"  type="int">0</int>                                        <!--  4 immat -->
+        <int   n="5"  type="int">0</int>                                        <!--  5 immat -->
+        <int   n="8"  type="int" alias="/sim/model/Livery/noze">1</int>         <!--  8 Noze type -->
+        <float n="0"  alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1"  alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m">0</float>                    <!--  2 altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft">0</float>                   <!--  3 altitude for smoke -->
+        <float n="4"  alias="/engines/engine[0]/n2"/>
+        <float n="5"  alias="/engines/engine[1]/n2"/>
+        <float n="6"  alias="/controls/engines/engine[0]/throttle"/>
+        <float n="7"  alias="/controls/engines/engine[1]/throttle"/>
+        <float n="8"  alias="/gear/gear[0]/wow/"/>
+        <float n="9"  alias="/gear/gear[1]/wow/"/>
+        <float n="10" alias="/gear/gear[2]/wow/"/>
+        <float n="11" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="12" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="13" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string"/>
+      </generic>
+    </multiplay>
+
+    <help include="Systems/help.xml"/>
+
+    <menubar include="Dialogs/tu134-menu.xml"/>
+
+    <!-- FUEL  -->
+    <fuel n="0">
+      <name>1L</name>
+      <weight-lb>0</weight-lb> 
+      <max-lb>1644</max-lb>
+      <min-lb>0</min-lb>
+    </fuel>
+    
+    <fuel n="1">
+      <name>2L</name>
+      <weight-lb>0</weight-lb> 
+      <max-lb>7000</max-lb>
+      <min-lb>0</min-lb>
+    </fuel>
+    
+    <fuel n="2">
+      <name>2L</name>
+      <weight-lb>0</weight-lb> 
+      <max-lb>3130</max-lb>
+      <min-lb>0</min-lb>
+    </fuel>
+    
+    <fuel n="3">
+      <name>3L</name>
+      <weight-lb>2000</weight-lb> 
+      <max-lb>2142</max-lb>
+      <min-lb>0</min-lb>
+    </fuel>
+    
+    <fuel n="4">
+      <name>M</name>
+      <weight-lb>0</weight-lb> 
+      <max-lb>3130</max-lb>
+      <min-lb>0</min-lb>
+    </fuel>
+    
+    <fuel n="5">
+      <name>1R</name>
+      <weight-lb>0</weight-lb> 
+      <max-lb>7000</max-lb>
+      <min-lb>0</min-lb>
+    </fuel>
+    
+    <fuel n="6">
+      <name>2R</name>
+      <weight-lb>0</weight-lb> 
+      <max-lb>1644</max-lb>
+      <min-lb>0</min-lb>
+    </fuel>
+    
+    <!-- BALLAST--> 
+    <weight n="0">
+      <name>Crew</name>
+      <weight-lb>693</weight-lb> 
+      <max-lb>2055</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+    
+    <weight n="1">
+      <name>Passengers/Cargo</name>
+      <weight-lb>7000</weight-lb>
+      <max-lb>29592</max-lb> 
+      <min-lb>0</min-lb>      
+    </weight>
+    
+  </sim>
+  
+  <input>
+    <keyboard include="Systems/tu134-keyboard.xml"/>
+  </input>
+  
+  <controls>
+    <gear>
+      <brake-parking type="double">1</brake-parking>
+    </gear>
+  </controls>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/Tu-134/Nasal/doors.nas</file>
+    </doors>
+    <tu134>
+      <file>Aircraft/Tu-134/Nasal/light.nas</file>
+      <file>Aircraft/Tu-134/Nasal/liveries.nas</file>
+      <file>Aircraft/Tu-134/Nasal/altimeter.nas</file>
+<!--  <file>Aircraft/Tu-134/Nasal/immat.nas</file> -->
+    </tu134>
+    <instruments>
+      <file>Aircraft/Tu-134/Nasal/idr.nas</file>
+    </instruments>
+    <engines>
+      <file>Aircraft/Generic/Engines/generic-yasim-engine.nas</file>
+      <file>Aircraft/Tu-134/Nasal/engines-yasim.nas</file>
+    </engines>
+  </nasal>
+   
+</PropertyList>
