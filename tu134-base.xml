@@ -37,9 +37,7 @@
     </flaps>
     
     <systems>
-      <electrical>
-        <path>Aircraft/Generic/generic-electrical.xml</path>
-      </electrical>
+      <path>Aircraft/Tu-134/Systems/tu134-systems.xml</path>
     </systems>  
     
     <instrumentation>

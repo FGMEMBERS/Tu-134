@@ -5,24 +5,28 @@
   <title>Tu 134</title>
   <line>______________________________________________</line>
   <key>
+    <name>}</name>
+    <desc>Engines Startup/Shutdown</desc>
+  </key>
+  <key>
     <name>d</name>
     <desc>Open/Close door</desc>
   </key>
   <key>
-    <name>j</name>
-    <desc>Spoiler down</desc>
-  </key>
-  <key>
     <name>k</name>
-    <desc>Spoiler up</desc>
+    <desc>Spoilers up</desc>
   </key>
   <key>
-    <name>DELETE</name>
-    <desc>reverse thrust</desc>
+    <name>j</name>
+    <desc>Spoilers down</desc>
+  </key>
+  <key>
+    <name>Del</name>
+    <desc>Thrust reversers On/Off</desc>
   </key>
   <key>
     <name>l</name>
-    <desc>Landing light On/Off</desc>
+    <desc>Landing lights On/Off</desc>
   </key>
   
 </PropertyList>

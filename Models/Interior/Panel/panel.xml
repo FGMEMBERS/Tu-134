@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> 
 
+<!--
+07.2015 - file modified by lastmin-II: added heading indicator (new, based on
+the generic model) and magnetic compass (from Yak-18T), instruments slightly
+rearranged (alignment, etc).
+-->
+
 <PropertyList>
 
   <path>panel.ac</path>
@@ -18,7 +24,7 @@
     <offsets>
       <x-m>  0.090 </x-m>
       <y-m> -0.540 </y-m>
-      <z-m>  0.060 </z-m>
+      <z-m>  0.072 </z-m>
     </offsets>
   </model>
 
@@ -27,7 +33,7 @@
     <offsets>
       <x-m> 0.090 </x-m>
       <y-m> 0.540 </y-m>
-      <z-m> 0.060 </z-m>
+      <z-m> 0.072 </z-m>
     </offsets>
   </model>
 
@@ -37,6 +43,25 @@
       <x-m>  0.08869 </x-m>
       <y-m> -0.39003 </y-m>
       <z-m>  0.19778 </z-m>
+    </offsets>
+  </model>
+
+  <!-- HI -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <offsets>
+      <x-m>  0.088 </x-m>
+      <y-m> -0.540 </y-m>
+      <z-m> -0.065 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <offsets>
+      <x-m>  0.088 </x-m>
+      <y-m>  0.540 </y-m>
+      <z-m> -0.065 </z-m>
     </offsets>
   </model>
 
@@ -142,7 +167,7 @@
     <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uvid-15/uvid-15m-little.xml</path>
     <offsets>
       <x-m>  0.08800 </x-m>
-      <y-m> -0.44653 </y-m>
+      <y-m> -0.44500 </y-m>
       <z-m> -0.08243 </z-m>
     </offsets>
   </model>
@@ -161,8 +186,8 @@
     <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
       <x-m>  0.08694 </x-m>
-      <y-m> -0.43900 </y-m>
-      <z-m>  0.03400 </z-m>
+      <y-m> -0.44200 </y-m>
+      <z-m>  0.02700 </z-m>
     </offsets>
   </model>
 
@@ -170,8 +195,8 @@
     <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
       <x-m> 0.08694 </x-m>
-      <y-m> 0.64100 </y-m>
-      <z-m> 0.03400 </z-m>
+      <y-m> 0.64000 </y-m>
+      <z-m> 0.02700 </z-m>
     </offsets>
   </model>
 
@@ -219,7 +244,7 @@
     <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/turn/turn.xml</path>
     <offsets>
       <x-m>  0.088 </x-m>
-      <y-m> -0.729 </y-m>
+      <y-m> -0.730 </y-m>
       <z-m> -0.003 </z-m>
     </offsets>
   </model>
@@ -228,7 +253,7 @@
     <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/turn/turn.xml</path>
     <offsets>
       <x-m> 0.088 </x-m>
-      <y-m> 0.364 </y-m>
+      <y-m> 0.370 </y-m>
       <z-m> 0.212 </z-m>
     </offsets>
   </model>
@@ -239,7 +264,7 @@
     <offsets>
       <x-m>  0.087 </x-m>
       <y-m> -0.640 </y-m>
-      <z-m>  0.034 </z-m>
+      <z-m>  0.027 </z-m>
     </offsets>
   </model>
 
@@ -247,8 +272,8 @@
     <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
       <x-m> 0.087 </x-m>
-      <y-m> 0.439 </y-m>
-      <z-m> 0.034 </z-m>
+      <y-m> 0.440 </y-m>
+      <z-m> 0.027 </z-m>
     </offsets>
   </model>
 
@@ -257,8 +282,8 @@
     <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
       <x-m>  0.086 </x-m>
-      <y-m> -0.360 </y-m>
-      <z-m>  0.028 </z-m>
+      <y-m> -0.357 </y-m>
+      <z-m>  0.020 </z-m>
     </offsets>
   </model>
 
@@ -271,7 +296,7 @@
     </offsets>
   </model>
 
-  <!-- ALT -->
+  <!-- Landing lights -->
   <model>
     <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
     <offsets>
@@ -287,6 +312,16 @@
       <x-m> 0.087 </x-m>
       <y-m> 0.247 </y-m>
       <z-m> 0.125 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Magnetic compass -->
+  <model>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/MagneticCompass/MagneticCompass.xml</path>
+    <offsets>
+      <x-m> -0.010 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.340 </z-m>
     </offsets>
   </model>
 
