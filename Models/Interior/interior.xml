@@ -72,14 +72,16 @@
   </animation>
 
   <!-- Pilote -->
+  <!--
   <model>
     <path>Aircraft/Tu-134/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m> -15.27948 </x-m>
-      <y-m>  -0.63000 </y-m>
+      <y-m>  -0.54000 </y-m>
       <z-m>  -0.94552 </z-m>
     </offsets>
   </model>
+  -->
 
   <!-- Tableau de bord -->
   <model>

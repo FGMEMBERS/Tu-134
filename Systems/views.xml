@@ -48,11 +48,11 @@ and magnetic compass.
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y">   0.47156 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -0.48604 </y-offset-m> <!-- Up    -->
+      <x-offset-m archive="y">   0.54000 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  -0.50000 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -15.17172 </z-offset-m> <!-- Back  -->
       <pitch-offset-deg> -10 </pitch-offset-deg>
-      <default-field-of-view-deg> 66 </default-field-of-view-deg>
+      <default-field-of-view-deg> 63 </default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -65,11 +65,11 @@ and magnetic compass.
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <x-offset-m archive="y">  -0.45556 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -0.77204 </y-offset-m> <!-- Up    -->
+      <x-offset-m archive="y">  -0.54000 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  -0.67204 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -15.07172 </z-offset-m> <!-- Back  -->
-      <pitch-offset-deg> 0 </pitch-offset-deg>
-      <default-field-of-view-deg type="double"> 52 </default-field-of-view-deg>
+      <pitch-offset-deg> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 44 </default-field-of-view-deg>
     </config>
   </view>
 
@@ -81,10 +81,14 @@ and magnetic compass.
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <x-offset-m archive="y">   0.00000 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -0.50604 </y-offset-m> <!-- Up    -->
+      <x-offset-m archive="y">  -0.54000 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  -0.50000 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -15.17172 </z-offset-m> <!-- Back  -->
-      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <!--<x-offset-m archive="y">   0.00000 </x-offset-m>--> <!-- Right -->
+      <!--<y-offset-m archive="y">  -0.50604 </y-offset-m>--> <!-- Up    -->
+      <!--<z-offset-m archive="y"> -15.17172 </z-offset-m>--> <!-- Back  -->
+      <pitch-offset-deg> 0.5 </pitch-offset-deg>
+      <heading-offset-deg> -30 </heading-offset-deg>
       <default-field-of-view-deg type="double"> 12 </default-field-of-view-deg>
     </config>
   </view>
@@ -93,11 +97,11 @@ and magnetic compass.
     <name>Captain Seat View</name>
     <internal archive="y">true</internal>
     <config>
-      <x-offset-m archive="y">  -0.47156 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -0.48604 </y-offset-m> <!-- Up    -->
+      <x-offset-m archive="y">  -0.54000 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  -0.50000 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -15.17172 </z-offset-m> <!-- Back  -->
       <pitch-offset-deg> -10 </pitch-offset-deg>
-      <default-field-of-view-deg> 66 </default-field-of-view-deg>
+      <default-field-of-view-deg> 63 </default-field-of-view-deg>
     </config>
   </view>
 
