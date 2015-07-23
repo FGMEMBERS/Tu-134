@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
 
-<!-- (c) 2007 by Yurik V. Nikiroff.
+<!-- (c) 2007 by Yurik V. Nikiroff (single needle tachometer).
 
 Modified by lastmin-II, 2015
 
 Changes:
 - adapted for Tu-134;
+- dual needle;
 - modified 3D model.
 
 -->
 
-<!-- Turbine rpm indicator ITE -->
+<!-- N2 dual tachometer -->
 
 <PropertyList>
 

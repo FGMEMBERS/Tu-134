@@ -8,6 +8,7 @@ Changes:
 - new dial and graphics;
 - improved 3D model;
 - restored original radio altimeter function (metric AGL).
+- calibrated to read 0 m AGL when the plane is on ground (Tu-134).
 
 -->
 
@@ -41,44 +42,26 @@ Changes:
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>/position/altitude-agl-ft</property>
+    <property>/position/gear-agl-m</property>
     <interpolation>
-      <!-- 0 m AGL --> 
-      <entry><ind>   0.0000 </ind><dep>   0.0 </dep></entry>
-      <!-- 10 m AGL --> 
-      <entry><ind>   32.808 </ind><dep>  15.0 </dep></entry>
-      <!-- 20 m AGL --> 
-      <entry><ind>   65.617 </ind><dep>  30.0 </dep></entry>
-      <!-- 30 m AGL --> 
-      <entry><ind>   98.425 </ind><dep>  45.0 </dep></entry>
-      <!-- 40 m AGL --> 
-      <entry><ind>  131.234 </ind><dep>  60.0 </dep></entry>
-      <!-- 50 m AGL --> 
-      <entry><ind>  164.042 </ind><dep>  75.0 </dep></entry>
-      <!-- 60 m AGL --> 
-      <entry><ind>  192.850 </ind><dep>  90.0 </dep></entry>
-      <!-- 70 m AGL --> 
-      <entry><ind>  229.659 </ind><dep> 106.2 </dep></entry>
-      <!-- 80 m AGL --> 
-      <entry><ind>  262.467 </ind><dep> 122.8 </dep></entry>
-      <!-- 90 m AGL --> 
-      <entry><ind>  295.276 </ind><dep> 138.4 </dep></entry>
-      <!-- 100 m AGL --> 
-      <entry><ind>  328.083 </ind><dep> 154.2 </dep></entry>
-      <!-- 200 m AGL --> 
-      <entry><ind>  656.168 </ind><dep> 180.0 </dep></entry>
-      <!-- 300 m AGL --> 
-      <entry><ind>  984.252 </ind><dep> 206.0 </dep></entry>
-      <!-- 400 m AGL --> 
-      <entry><ind> 1312.336 </ind><dep> 231.7 </dep></entry>
-      <!-- 500 m AGL --> 
-      <entry><ind> 1640.420 </ind><dep> 257.4 </dep></entry>
-      <!-- 600 m AGL --> 
-      <entry><ind> 1968.504 </ind><dep> 283.2 </dep></entry>
-      <!-- 700 m AGL --> 
-      <entry><ind> 2296.588 </ind><dep> 308.6 </dep></entry>
-      <!-- 800 m AGL --> 
-      <entry><ind> 2624.672 </ind><dep> 334.0 </dep></entry>
+      <entry><ind>   0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  10 </ind><dep>  15.0 </dep></entry>
+      <entry><ind>  20 </ind><dep>  30.0 </dep></entry>
+      <entry><ind>  30 </ind><dep>  45.0 </dep></entry>
+      <entry><ind>  40 </ind><dep>  60.0 </dep></entry>
+      <entry><ind>  50 </ind><dep>  75.0 </dep></entry>
+      <entry><ind>  60 </ind><dep>  90.0 </dep></entry>
+      <entry><ind>  70 </ind><dep> 106.2 </dep></entry>
+      <entry><ind>  80 </ind><dep> 122.8 </dep></entry>
+      <entry><ind>  90 </ind><dep> 138.4 </dep></entry>
+      <entry><ind> 100 </ind><dep> 154.2 </dep></entry>
+      <entry><ind> 200 </ind><dep> 180.0 </dep></entry>
+      <entry><ind> 300 </ind><dep> 206.0 </dep></entry>
+      <entry><ind> 400 </ind><dep> 231.7 </dep></entry>
+      <entry><ind> 500 </ind><dep> 257.4 </dep></entry>
+      <entry><ind> 600 </ind><dep> 283.2 </dep></entry>
+      <entry><ind> 700 </ind><dep> 308.6 </dep></entry>
+      <entry><ind> 800 </ind><dep> 334.0 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>

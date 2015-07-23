@@ -6,7 +6,7 @@ name "Blender_export__radio_alt.ac"
 kids 3
 OBJECT poly
 name "face"
-loc -0.0502687 0.0000000 -0.0004750
+loc -0.0502687 0.0000000 0.0000000
 crease 179.0
 texture "radio_alt.png"
 texrep 1 1
@@ -240,7 +240,7 @@ refs 3
 kids 0
 OBJECT poly
 name "frame"
-loc 0.0058688 -0.0005682 -0.0000175
+loc 0.0058688 0.0000000 0.0000000
 crease 30.0
 texture "frame.png"
 texrep 1 1
