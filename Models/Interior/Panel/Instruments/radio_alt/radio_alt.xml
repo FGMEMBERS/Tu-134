@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- (c) 2015 by lastmin-II
+
+Based on work by Yurik V. Nikiroff (c) 2006 and Helijah (c) 2012, 2014.
+
+Changes:
+- new dial and graphics;
+- improved 3D model;
+- restored original radio altimeter function (metric AGL).
+
+-->
+
+<PropertyList>
+  
+  <path>radio_alt.ac</path>
+  
+  <animation>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+  </animation>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Tu-134/Models/Effects/Glass/glass</inherits-from>
+    <object-name>glass</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/position/altitude-agl-ft</property>
+    <interpolation>
+      <!-- 0 m AGL --> 
+      <entry><ind>   0.0000 </ind><dep>   0.0 </dep></entry>
+      <!-- 10 m AGL --> 
+      <entry><ind>   32.808 </ind><dep>  15.0 </dep></entry>
+      <!-- 20 m AGL --> 
+      <entry><ind>   65.617 </ind><dep>  30.0 </dep></entry>
+      <!-- 30 m AGL --> 
+      <entry><ind>   98.425 </ind><dep>  45.0 </dep></entry>
+      <!-- 40 m AGL --> 
+      <entry><ind>  131.234 </ind><dep>  60.0 </dep></entry>
+      <!-- 50 m AGL --> 
+      <entry><ind>  164.042 </ind><dep>  75.0 </dep></entry>
+      <!-- 60 m AGL --> 
+      <entry><ind>  192.850 </ind><dep>  90.0 </dep></entry>
+      <!-- 70 m AGL --> 
+      <entry><ind>  229.659 </ind><dep> 106.2 </dep></entry>
+      <!-- 80 m AGL --> 
+      <entry><ind>  262.467 </ind><dep> 122.8 </dep></entry>
+      <!-- 90 m AGL --> 
+      <entry><ind>  295.276 </ind><dep> 138.4 </dep></entry>
+      <!-- 100 m AGL --> 
+      <entry><ind>  328.083 </ind><dep> 154.2 </dep></entry>
+      <!-- 200 m AGL --> 
+      <entry><ind>  656.168 </ind><dep> 180.0 </dep></entry>
+      <!-- 300 m AGL --> 
+      <entry><ind>  984.252 </ind><dep> 206.0 </dep></entry>
+      <!-- 400 m AGL --> 
+      <entry><ind> 1312.336 </ind><dep> 231.7 </dep></entry>
+      <!-- 500 m AGL --> 
+      <entry><ind> 1640.420 </ind><dep> 257.4 </dep></entry>
+      <!-- 600 m AGL --> 
+      <entry><ind> 1968.504 </ind><dep> 283.2 </dep></entry>
+      <!-- 700 m AGL --> 
+      <entry><ind> 2296.588 </ind><dep> 308.6 </dep></entry>
+      <!-- 800 m AGL --> 
+      <entry><ind> 2624.672 </ind><dep> 334.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
