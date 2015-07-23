@@ -41,6 +41,7 @@ Changes:
   <animation>
     <type>material</type>
     <object-name>face</object-name>
+    <object-name>needle</object-name>
     <object-name>alt10</object-name>
     <object-name>alt100</object-name>
     <object-name>alt1000</object-name>
@@ -49,7 +50,6 @@ Changes:
     <object-name>millibar10</object-name>
     <object-name>millibar100</object-name>
     <object-name>millibar1000</object-name>
-    <object-name>needle</object-name>
     <emission>
       <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
@@ -58,7 +58,7 @@ Changes:
     </emission>
   </animation>
   
-  <!-- Needle -->
+  <!-- Needle (meters) -->
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>

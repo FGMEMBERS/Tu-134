@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <!--
-07.2015 - file modified by lastmin-II: views added for captain's instruments
-and magnetic compass. 
+
+Modified by lastmin-II, 07.2015:
+- Added views for captain's instruments and magnetic compass.
+- Modified view for both pilots.
+
 -->
 
 <PropertyList>
@@ -49,7 +52,7 @@ and magnetic compass.
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
       <x-offset-m archive="y">   0.54000 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -0.50000 </y-offset-m> <!-- Up    -->
+      <y-offset-m archive="y">  -0.50500 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -15.17172 </z-offset-m> <!-- Back  -->
       <pitch-offset-deg> -10 </pitch-offset-deg>
       <default-field-of-view-deg> 63 </default-field-of-view-deg>
@@ -84,9 +87,6 @@ and magnetic compass.
       <x-offset-m archive="y">  -0.54000 </x-offset-m> <!-- Right -->
       <y-offset-m archive="y">  -0.50000 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -15.17172 </z-offset-m> <!-- Back  -->
-      <!--<x-offset-m archive="y">   0.00000 </x-offset-m>--> <!-- Right -->
-      <!--<y-offset-m archive="y">  -0.50604 </y-offset-m>--> <!-- Up    -->
-      <!--<z-offset-m archive="y"> -15.17172 </z-offset-m>--> <!-- Back  -->
       <pitch-offset-deg> 0.5 </pitch-offset-deg>
       <heading-offset-deg> -30 </heading-offset-deg>
       <default-field-of-view-deg type="double"> 12 </default-field-of-view-deg>
@@ -98,7 +98,7 @@ and magnetic compass.
     <internal archive="y">true</internal>
     <config>
       <x-offset-m archive="y">  -0.54000 </x-offset-m> <!-- Right -->
-      <y-offset-m archive="y">  -0.50000 </y-offset-m> <!-- Up    -->
+      <y-offset-m archive="y">  -0.50500 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -15.17172 </z-offset-m> <!-- Back  -->
       <pitch-offset-deg> -10 </pitch-offset-deg>
       <default-field-of-view-deg> 63 </default-field-of-view-deg>

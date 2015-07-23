@@ -19,7 +19,7 @@
   Animations for the ki227 adf and ki228 rmi indicator
   Maintainer: Torsten Dreyer
 
-  07.2015, modified by lastmin-II (compass rose, 3D model, priority to ki228)
+  07.2015, modified by lastmin-II (3D model, new compass rose, default to ki228)
 
   The VOR needle is currently hardwired to NAV1
   The ADF needle is currently hardwired to ADF1
