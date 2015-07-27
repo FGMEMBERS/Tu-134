@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim include="Systems/views.xml">
+    <description>Tu-134A</description>
+    <author></author>
+    <status>0.01</status>
+
+    <flight-model>jsb</flight-model>
+    <aero>tu134a</aero>
+
+  <startup>
+   <splash-texture>Aircraft/Tu-134/tu134-splash.png</splash-texture>
+  </startup>
+
+    <sound>
+      <path>Aircraft/Tu-134/Sounds/tu134-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Tu-134/Models/tu134a.xml</path>
+      <livery>
+        <file type="string">default</file>
+        <noze>1</noze>
+      </livery>
+    </model>
+
+    <flaps>
+      <setting>0.0</setting> <!--  0 deg -->
+      <setting>0.2</setting> <!-- 10 deg -->
+      <setting>0.4</setting> <!-- 15 deg -->
+      <setting>0.6</setting> <!-- 20 deg -->
+      <setting>0.8</setting> <!-- 25 deg -->
+      <setting>1.0</setting> <!-- 30 deg -->
+    </flaps>
+    
+    <systems>
+      <path>Aircraft/Tu-134/Systems/tu134-systems.xml</path>
+    </systems>  
+    
+    <instrumentation>
+      <path>Aircraft/Tu-134/Systems/instrumentation.xml</path>
+    </instrumentation>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int   n="0"  type="int">0</int>                                        <!--  0 immat -->
+        <int   n="1"  type="int">0</int>                                        <!--  1 immat -->
+        <int   n="2"  type="int">0</int>                                        <!--  2 immat -->
+        <int   n="3"  type="int">0</int>                                        <!--  3 immat -->
+        <int   n="4"  type="int">0</int>                                        <!--  4 immat -->
+        <int   n="5"  type="int">0</int>                                        <!--  5 immat -->
+        <int   n="8"  type="int" alias="/sim/model/livery/noze">0</int>         <!--  8 Noze type -->
+        <float n="0"  alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1"  alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m">0</float>                    <!--  2 altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft">0</float>                   <!--  3 altitude for smoke -->
+        <float n="4"  alias="/engines/engine[0]/n2"/>
+        <float n="5"  alias="/engines/engine[1]/n2"/>
+        <float n="6"  alias="/controls/engines/engine[0]/throttle"/>
+        <float n="7"  alias="/controls/engines/engine[1]/throttle"/>
+        <float n="8"  alias="/gear/gear[0]/wow/"/>
+        <float n="9"  alias="/gear/gear[1]/wow/"/>
+        <float n="10" alias="/gear/gear[2]/wow/"/>
+        <float n="11" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="12" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="13" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string"/>
+      </generic>
+    </multiplay>
+
+  </sim>
+
+  <input>
+    <keyboard include="Systems/tu134-keyboard.xml"/>
+  </input>
+
+  <controls>
+   <gear>
+    <brake-parking type="bool">1</brake-parking>
+   </gear>
+  </controls>
+
+ <engines>
+  <engine n="0">
+   <running>true</running>
+   <reverser-position type="double">0.000000</reverser-position>
+  </engine>
+  <engine n="1">
+   <running>true</running>
+   <reverser-position type="double">0.000000</reverser-position>
+  </engine>
+ </engines>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Tu-134/Nasal/doors.nas</file>
+    </doors>
+    <tu134>
+      <file>Aircraft/Tu-134/Nasal/light.nas</file>
+      <file>Aircraft/Tu-134/Nasal/liveries.nas</file>
+      <file>Aircraft/Tu-134/Nasal/altimeter.nas</file>
+<!--  <file>Aircraft/Tu-134/Nasal/immat.nas</file> -->
+    </tu134>
+    <instruments>
+      <file>Aircraft/Tu-134/Nasal/idr.nas</file>
+    </instruments>
+  </nasal>
+
+</PropertyList>
+
