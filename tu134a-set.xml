@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-  <sim include="Systems/views.xml">
+  <sim include="Systems/tu134a-views.xml">
     <description>Tu-134A</description>
     <author></author>
     <status>0.01</status>
@@ -10,7 +10,7 @@
     <aero>tu134a</aero>
 
   <startup>
-   <splash-texture>Aircraft/Tu-134/tu134-splash.png</splash-texture>
+   <splash-texture>Aircraft/Tu-134/tu134a-splash.png</splash-texture>
   </startup>
 
     <sound>

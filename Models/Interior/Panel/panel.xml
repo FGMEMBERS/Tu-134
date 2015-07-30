@@ -37,7 +37,7 @@ Modified by lastmin-II, 07.2015
 
   <!-- AI 2 -->
   <model>
-    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/ai2/ai2.xml</path>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/agb/agb.xml</path>
     <offsets>
       <x-m>  0.08869 </x-m>
       <y-m> -0.37000 </y-m>
@@ -45,9 +45,9 @@ Modified by lastmin-II, 07.2015
     </offsets>
   </model>
 
-  <!-- HI -->
+  <!-- HSI -->
   <model>
-    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
     <offsets>
       <x-m>  0.090 </x-m>
       <y-m> -0.540 </y-m>
@@ -56,7 +56,7 @@ Modified by lastmin-II, 07.2015
   </model>
 
   <model>
-    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
     <offsets>
       <x-m>  0.090 </x-m>
       <y-m>  0.540 </y-m>
@@ -278,7 +278,7 @@ Modified by lastmin-II, 07.2015
 
   <!-- UAP -->
   <model>
-    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uap/uap.xml</path>
+    <path>Aircraft/Tu-134/Models/Interior/Panel/Instruments/uap-12/uap-12.xml</path>
     <offsets>
       <x-m>  0.088 </x-m>
       <y-m> -0.215 </y-m>
