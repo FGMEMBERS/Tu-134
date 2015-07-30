@@ -35,15 +35,15 @@
     <object-name>needle</object-name>
     <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <interpolation>
-      <entry><ind> -6000 </ind><dep>  170 </dep></entry>
-      <entry><ind> -4000 </ind><dep>  139 </dep></entry>
-      <entry><ind> -2000 </ind><dep>   83 </dep></entry>
-      <entry><ind> -1000 </ind><dep>   48 </dep></entry>
-      <entry><ind>     0 </ind><dep>    0 </dep></entry>
-      <entry><ind>  1000 </ind><dep>  -48 </dep></entry>
-      <entry><ind>  2000 </ind><dep>  -83 </dep></entry>
-      <entry><ind>  4000 </ind><dep> -139 </dep></entry>
-      <entry><ind>  6000 </ind><dep> -170 </dep></entry>
+      <entry><ind> -9842.5 </ind><dep>  179.9 </dep></entry> <!-- -3000 MPS -->
+      <entry><ind> -6561.7 </ind><dep>  143.1 </dep></entry> <!-- -2000 MPS -->
+      <entry><ind> -3280.8 </ind><dep>   82.3 </dep></entry> <!-- -1000 MPS -->
+      <entry><ind> -1640.4 </ind><dep>   42.4 </dep></entry> <!--  -500 MPS -->
+      <entry><ind>     0.0 </ind><dep>    0.0 </dep></entry> <!--     0 MPS -->
+      <entry><ind>  1640.4 </ind><dep>  -42.4 </dep></entry> <!--   500 MPS -->
+      <entry><ind>  3280.8 </ind><dep>  -82.3 </dep></entry> <!--  1000 MPS -->
+      <entry><ind>  6561.7 </ind><dep> -143.1 </dep></entry> <!--  2000 MPS -->
+      <entry><ind>  9842.5 </ind><dep> -179.9 </dep></entry> <!--  3000 MPS -->
     </interpolation>
     <axis>
       <x> 1 </x>
