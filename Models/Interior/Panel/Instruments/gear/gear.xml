@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- Turbine turn indicator ITE-2t (two needles)
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>gear.ac</path>
+<!-- Internal instruments lighting -->
+
+ <animation>
+   <object-name>gear_up</object-name>
+   <type>select</type>
+    <condition>
+	<equals>
+	  <property>gear/gear[1]/position-norm</property>
+	  <value>0</value>
+	</equals>
+    </condition>
+  </animation>
+   
+ <animation>
+   <object-name>gear_down</object-name>
+   <type>select</type>
+    <condition>
+	<equals>
+	  <property>gear/gear[1]/position-norm</property>
+	  <value>1</value>
+	</equals>
+    </condition>
+  </animation>
+  
+</PropertyList>

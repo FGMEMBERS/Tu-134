@@ -782,13 +782,11 @@
           <property>metrics/cbarw-ft</property>
           <property>fcs/elevator-pos-rad</property>
           <table>
-            <independentVar lookup="row">velocities/mach</independentVar>
-            <independentVar lookup="column">position/h-sl-ft</independentVar>
-            <tableData>
-                      6560    16405    32810
-              0.3    -1.50    -1.49    -1.64
-              0.8    -1.31    -1.38    -1.43
-            </tableData>
+             <independentVar>velocities/mach</independentVar>
+                <tableData>
+                0.0000	-1.2000
+                2.0000	-0.3000
+             </tableData>
           </table>
        </product>
     </function>
@@ -801,7 +799,7 @@
            <property>metrics/cbarw-ft</property>
            <property>aero/ci2vel</property>
            <property>velocities/q-aero-rad_sec</property>
-           <value>-17</value>
+           <value>-15</value>
        </product>
     </function>
 
