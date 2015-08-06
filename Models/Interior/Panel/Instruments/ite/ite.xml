@@ -35,7 +35,8 @@ Changes:
   <animation>
     <type>rotate</type>
     <object-name>needle1</object-name>
-    <property>/engines/engine[0]/rpm</property>
+<!--    <property>/engines/engine[0]/rpm</property> only yasim -->
+    <property>/engines/engine[0]/n2</property>
     <interpolation>
       <entry><ind>   0.0 </ind><dep>  50.0 </dep></entry>
       <entry><ind>  55.0 </ind><dep> 219.2 </dep></entry>
@@ -53,7 +54,8 @@ Changes:
   <animation>
     <type>rotate</type>
     <object-name>needle2</object-name>
-    <property>/engines/engine[1]/rpm</property>
+<!--    <property>/engines/engine[1]/rpm</property> only yasim -->
+    <property>/engines/engine[1]/n2</property>
     <interpolation>
       <entry><ind>   0.0 </ind><dep>  50.0 </dep></entry>
       <entry><ind>  55.0 </ind><dep> 219.2 </dep></entry>
