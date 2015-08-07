@@ -93,6 +93,76 @@
     </offsets>
   </model>
 
+<animation>
+  <type>rotate</type>
+  <object-name>yoke_l1</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>50</factor>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.564</y-m>
+    <z-m>0.027</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>yoke_l1</object-name>
+  <object-name>yoke_l2</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>6</factor>
+  <center>
+    <x-m>0.375</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.65</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>yoke_r1</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>50</factor>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.564</y-m>
+    <z-m>0.027</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>yoke_r1</object-name>
+  <object-name>yoke_r2</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>6</factor>
+  <center>
+    <x-m>0.375</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.65</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
   <!-- OverHead -->
   <model>
     <path>Aircraft/Tu-134/Models/Interior/Panel/Overhead/overhead.xml</path>
