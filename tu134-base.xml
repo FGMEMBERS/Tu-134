@@ -55,7 +55,7 @@
         <int   n="3"  type="int">0</int>                                        <!--  3 immat -->
         <int   n="4"  type="int">0</int>                                        <!--  4 immat -->
         <int   n="5"  type="int">0</int>                                        <!--  5 immat -->
-        <int   n="8"  type="int" alias="/sim/model/Livery/noze">1</int>         <!--  8 Noze type -->
+        <int   n="8"  type="int" alias="/sim/model/livery/noze">1</int>         <!--  8 Noze type -->
         <float n="0"  alias="/instrumentation/doors/crew/position-norm"/>
         <float n="1"  alias="/instrumentation/doors/passenger/position-norm"/>
         <float n="2"  alias="/position/gear-agl-m">0</float>                    <!--  2 altitude for MP shadow -->
